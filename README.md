@@ -500,7 +500,7 @@ Since it is an inner product function, $f(x)$ therefore can be seen as a **weigh
 
 
 
-:pushpin: **Superposition & Linearity**
+:pushpin: **Superposition叠加性 & Linearity线性性**
 
 Suppose $f$ is an inner product function, $f$ can therefore be written as $a^T$. We have:
 $$
@@ -526,9 +526,5755 @@ The function $f: \mathbb{R}^n\to\mathbb{R}$  is linear which it MUST satisfy fol
 
 :pushpin:**Inner Product Representation of a Linear Function**
 
+The logic can be back and forth.
+
+| Hypothesis/Conclusion                                        | Relation | Hypothesis/Conclusion |
+| ------------------------------------------------------------ | -------- | --------------------- |
+| A function defined as the inner product of its argument with some fixed vector. | :repeat: | A function is linear. |
+
+We therefore say $a^Tx$ the inner product representation of $f$.
+
 
 
 ### 2.1.3. Example
+
+:pushpin: **Average**
+
+The average of a $n$-vector can be defined as:
+$$
+f(x)=(x_1+x_2+\cdots+x_n)/n
+$$
+It can be denoted as **avg($x$)** . It also can be written as:
+$$
+f(x)=a^Tx,\text{   st. }\\a=(\frac{1}{n},\frac{1}{n},\cdots,\frac{1}{n})^T=\bold{1}/n
+$$
+meaning times $1/n$​ for every elements.
+
+ 
+
+:pushpin: **Maximum**
+
+The maximum of a $n$-vector can be expressed as followed:
+$$
+f(x)=\text{max}\{x_1,\cdots,x_n\}
+$$
+Obviously, it is not a linear function. 
+
+
+
+### 2.1.4. Affine Function
+
+:pushpin: **What is it?**
+
+Affine function is (linear function) + (a CONSTANT).
+$$
+f:\mathbb{R}^n\to\mathbb{R}
+\\f(x)=a^Tx+b
+$$
+$a$:  a $n$-vector
+
+$x$:  a $n$-vector
+
+$b$:  a scalar, normally called **offset**
+
+
+
+:pushpin: **Constraint on Superposition**
+
+For linear function, no constraint on superposition.
+
+For affine function, there IS constraint on superposition :warning:where the coefficients have to be **1** in total.
+
+Because superposition is:
+$$
+f(\alpha x+\beta y)=\alpha f(x)+\beta f(y)
+$$
+And affine function is:
+$$
+f(x)=a^Tx+b
+$$
+Therefore there are **2** in both sides:
+$$
+b=\alpha b_1+\beta b_2
+$$
+So the only chance they are the same is that 
+$$
+\alpha+\beta=1
+$$
+:thinking: What can we take advantage of this property?
+
+OK, an affine function can satisfy superposition if and only if $\alpha+\beta=1$. Therefore, we can think another way around: if we set $\alpha+\beta=1$, and the function does NOT satisfy superposition, then it is NOT an affine function.
+
+
+
+## 2.2. Taylor Approximation
+
+:pushpin: **What for?**
+
+:dart: Application on scalar-valued functions of $n$ variables, or **relations** between $n$ variables and a scalar.
+$$
+\begin{bmatrix}
+x_1\\x_2\\\vdots\\x_n 
+\end{bmatrix}
+\to a
+$$
+Normally, this relation is **approximated** by either :one: linear function or :two: affine function. Sometime these 2 functions are called **model**.
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
+
+:pushpin: ****
+
+
 
 :pushpin: ****
 
