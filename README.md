@@ -462,21 +462,73 @@ Because the left hand side and right hand side are not equal sometimes!! But the
 
 
 
-:pushpin: ****
+# 2.Linear Function
+
+This chapter is mainly on Linear Function and Affine Function.
+
+## 2.1. Basics of Linear Function
+
+### 2.1.1. Function Notation
+
+:pushpin:**The symbol**
+
+Use $f$ to denote a function.
 
 
 
-:pushpin: ****
+:pushpin: **What is a function?**
+
+$f$ is a function that **maps** real $n$-vectors to **real** numbers. 
+
+Therefore, $f(x)$ is a scalar which is the **value** of such function at $x$(param).  Hence, function sometimes is called real-valued function or scalar-valued function.
 
 
 
-:pushpin: ****
+### 2.1.2. Inner Product Function
+
+:pushpin: **What is it?**
+
+An inner product function is like:
+$$
+f(x)=a^Tx = a_1x_1+a_2x_2+\cdots+a_nx_n
+$$
+$a$:   is a $n$-vector
+
+$x$:   is also a $n$-vector
+
+Since it is an inner product function, $f(x)$ therefore can be seen as a **weighted sum function** where $a$​ is the weight vector.
 
 
 
-:pushpin: ****
+:pushpin: **Superposition & Linearity**
+
+Suppose $f$ is an inner product function, $f$ can therefore be written as $a^T$. We have:
+$$
+\begin{align}
+f(\alpha x+\beta y)&=a^T(\alpha x+ \beta y)\\
+&=a^T(\alpha x)+a^T(\beta y)\\
+&=\alpha(a^Tx)+\beta(a^Ty)\\
+&=\alpha f(x)+\beta f(y)
+\end{align}
+$$
+$x, y$ are $n$-vector.  $\alpha,\beta$​ are scalar. The property above is called **superposition**. A function is **linear** if it satisfies this property.
 
 
+
+:pushpin: **Super Formal Definition on Linear**
+
+The function $f: \mathbb{R}^n\to\mathbb{R}$  is linear which it MUST satisfy following 2 property:
+
+- **homogeneity齐次性**.    $f(\alpha x)=\alpha f(x)$   emphasize on scaling
+- **Additivity可加性.**    $f(x+y)=f(x)+f(y)$  emphasize on adding
+
+
+
+:pushpin:**Inner Product Representation of a Linear Function**
+
+
+
+### 2.1.3. Example
 
 :pushpin: ****
 
