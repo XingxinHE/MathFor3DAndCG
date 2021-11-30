@@ -620,17 +620,114 @@ x_1\\x_2\\\vdots\\x_n
 $$
 Normally, this relation is **approximated** by either :one: linear function or :two: affine function. Sometime these 2 functions are called **model**.
 
-:pushpin: ****
+
+
+:pushpin: **What is Taylor Approximation?**
+
+Suppose that $f: \mathbb{R^n} \to \mathbb{R}$ is differentiable, which means that its partial derivatives exist. Let $z$ be an $n$-vector. The (first-order) *Taylor Approximation* of $f$ near (or at) the point $z$ is the function $\hat{f}(x)$ of $x$ defined as:
+$$
+\hat{f}(x)=f(z)+\frac{\partial f}{\partial x_1}(z)(x_1-z_1)+\cdots+\frac{\partial f}{\partial x_n}(z)(x_n-z_n)
+$$
+
+- $\frac{\partial f}{\partial x_i}(z)$ , denotes the partial derivative of $f$ with respect to its $i$th argument, evaluated at the $n$-vector $z$.
+
+- $\hat{f}$  ,  the hat is a hint that it is an approximation of the function $f$.
+- $\hat{f}(x;z)$  , is written with 2nd argument to show the point  $z$ at which the approximation is developed.
+- $f(z)$  , the first item of Taylor is **constant**, while others can be seen as the contributions to the change(from $f(z)$) due to the changes in the component of $x$ (from $z$).
 
 
 
-:pushpin: ****
+:pushpin:**Affine Function**
+
+Apparently, since there is always a $f(z)$ ,which is a constant, in the beginning, $\hat{f}(x)$ is therefore an **affine function**. It could be written as followed:
+$$
+\hat{f}(x)=f(z)+\grad f(z)^T(x-z)
+$$
+- $f(z)$, it is a constant which is the value of this function when $x=z$
+
+- $\grad f(z)$  , is a $n$-vector, the **gradient** of $f$ at the point $z$ is:
+
+$$
+\grad f(z)=\begin{bmatrix}\frac{\partial f}{\partial x_1}(z)\\\vdots\\\frac{\partial f}{\partial x_n}(z)\end{bmatrix}
+$$
+
+- $(x-z)$, the **deviation/perturbation(偏差/扰动)** of $x$ respect to $z$
 
 
 
-:pushpin: ****
+
+:pushpin: **What does it mean by `approximation`?**
+
+A simple example, for $n = 1$, is shown in the following figure. Over the full $x$-axis scale shown, the Taylor approximation $\hat{f}$ does not give a good approximation of the function $f$. But for **$x$ near $z$**, the Taylor approximation is very **good**.
+
+<img src="img/image-20211129222919801.png" alt="image-20211129222919801" style="zoom: 67%;" />
+
+A function f of one variable, and the first-order Taylor approximation $\hat{f}(x)=f(z)+f'(z)(x-z)$
 
 
+
+:pushpin: **Example**
+
+Consider the function $f : \mathbb{R}^2 \to \mathbb{R}$ given by $f(x) = x_1 + \text{exp}(x_2 − x_1 )$ , which is not linear or affine. The assignment is to **find** the Taylor Approximation $\hat{f}$ **near the point** $z=(1,2)$.
+
+- first, take the partial derivative of this function:
+
+$$
+\grad f(z)=
+\begin{bmatrix}
+1-\text{exp}(z_2-z_1)\\
+\text{exp}(z_2-z_1)
+\end{bmatrix}
+$$
+
+- two, place $z_2=2, z_1=1$ in it
+- $\text{exp}=e,\quad e^1=2.7183$, therefore $\grad f(z)$ at $z=(1,2)$ is:
+
+$$
+\grad f(z)=
+\begin{bmatrix}
+1-e^1\\
+e^1
+\end{bmatrix}
+=
+\begin{bmatrix}
+-1.7183\\
+2.7183
+\end{bmatrix}
+$$
+
+- $f(z)$ at $z=(1,2)$ is:
+
+$$
+f(z)=x_1 + \text{exp}(x_2 − x_1 )=1+e^{2-1}=3.7183
+$$
+
+- the Taylor approximation therefore is:
+
+$$
+\begin{align}
+\hat{f}(x)&=f(z)+\grad f(z)^T(x-z)\\
+&=3.7183+\begin{bmatrix}-1.7183&
+2.7183\end{bmatrix}^T(x-\begin{bmatrix}1\\2\end{bmatrix})\\
+&=3.7183+\begin{bmatrix}-1.7183&
+2.7183\end{bmatrix}^T(\begin{bmatrix}x_1\\x_2\end{bmatrix}-\begin{bmatrix}1\\2\end{bmatrix})\\
+&=3.7183-1.7183(x_1 -1)+2.7183(x_2-2)
+\end{align}
+$$
+
+How to measure it is a good approximation:
+
+| $x$           | $f(x)$ | $\hat{f}(x)$ | $\abs{\hat{f}(x)-f(x)}$ |
+| ------------- | ------ | ------------ | ----------------------- |
+| (1.00, 2.00)  | 3.7183 | 3.7183       | 0.000                   |
+| (0.96, 1.98)  | 3.7332 | 3.7326       | 0.0005                  |
+| (1 .10, 2.11) | 3.8456 | 3.8455       | 0.0001                  |
+| (0.85, 2.05)  | 4.1701 | 4.1119       | 0.0582                  |
+| (1.25, 2.41)  | 4.4399 | 4.4032       | 0.0367                  |
+
+
+
+## 2.3. Regression Model
 
 :pushpin: ****
 
