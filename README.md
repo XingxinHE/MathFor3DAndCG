@@ -1,10 +1,15 @@
  # Lecture Notes of Linear Algebra [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)]()
 
-These lecture notes were documented when I first learned Linear Algebra online(MIT 18.06 Linear Algebra). Since I am now resolved to incline to computational design rather than traditional architectural design, I feel compelled to review these knowledge. I am trying to revise the notes into digital format.
+My study path towards Linear Algebra:
+
+- Stephen Boyd, Lieven Vandenberghe, Introduction to Applied Linear Algebra
+-  Strang, Linear Algebra online(MIT 18.06 Linear Algebra)
+
+Since I am now resolved to incline to computational design rather than traditional architectural design, I feel compelled to review these knowledge. I am trying to revise the notes into digital format.
 
 
 
-The following libraries are required among these Jupyter Notebooks.
+The following libraries are required among Jupyter Notebooks.
 
 - [x] Matplotlib
 - [x] NumPy
@@ -756,23 +761,76 @@ Although I think this notation is kind of useless, the following is its equation
 $$
 \hat{y}=x^T\beta+v=\begin{bmatrix}1\\x\end{bmatrix}^T\begin{bmatrix}v\\\beta\end{bmatrix}
 $$
-The dimension of 
+The dimension of $1,v$ are 1.
+
+The dimension of $x,\beta$ are $n$.
+
+Literally no difference from the left hand side.
 
 
 
-:pushpin: ****
+:pushpin: **House price regression model**
+
+Suppose:
+
+- $y$, the actual selling price of the house
+- $x_1$, the house area
+- $x_2$, the number of bedrooms
+- $\hat{y}$, the estimate price
+
+Then we have:
+$$
+\hat{y}=x^T\beta+v=\beta_1x_1+\beta_2x_2+v
+$$
+As a specific numerical example, consider the regression model parameters:
+$$
+\beta=(148.73,-18.85), \quad v=54.40
+$$
+
+- $\beta_1>0$, it is easy to understand, house area:arrow_up_small:, price:arrow_up_small:
+- $\beta_2<0$, this is hard to understand, maybe because increasing the number of rooms with same area will be considered as a public house?..(公租房)
+- $v>0$, considering when $x_1=0,x_2=0$, then $v=54.40$, that is the value of the lot.(土地价格)
 
 
 
-:pushpin: ****
+# 3.Norm and Distance
+
+## 3.1. Norm
+
+:pushpin: **Euclidean Norm(L-2 Norm)**
+
+Suppose:
+
+- $x$ is a $n$-vector
+- $\norm{x}$, is denoted as its *norm*.
+
+$$
+\norm{x}=\sqrt{x_1^2+x_2^2+\cdots+x_n^2+}
+$$
+
+Since it is no difference as the **squareroot of the inner product** of the vector with **itself**, we can write as:
+$$
+\norm{x}=\sqrt{x^Tx}
+$$
+Another notation of Euclidean Norm:
+$$
+\norm{x}_2
+$$
+The subscript $2$ indicates that the entries of $x$ are raised to the second power. That's why we call it L-2 Norm.
 
 
 
-:pushpin: ****
+:pushpin: **Why we use $\norm{ }$ to wrap Euclidean Norm?**
+
+> ​	:star:For measuring magnitude
+
+The double bar notation indicates the norm of a vector is a (numerical) measure of its **magnitude**(not considering orientation). Therefore, we can say a vector is **small** if its *norm is a small* number, and **large** is with a *large number*.
 
 
 
-:pushpin: ****
+:pushpin: **Properties of Norm**
+
+//TODO
 
 
 
