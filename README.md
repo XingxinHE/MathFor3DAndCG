@@ -729,11 +729,34 @@ How to measure it is a good approximation:
 
 ## 2.3. Regression Model
 
-:pushpin: ****
+:pushpin: **What is it?**
+$$
+\hat{y} = x^T\beta+v
+$$
+
+- $x$, a $n$-vector a.k.a. **feature** vector
+  - $x_1,x_2,...,x_n$ are regressor
+- $\beta$, a $n$-vector, **weight vector** / coefficient vector
+- $v$, a scalar, **offset** / intercept
+- $\hat{y}$, the $\hat{}$ symbol indicating it is an estimate / **prediction**
+- $y$, dependent variable, **output labels**
+
+Special Indication:
+
+- $\beta, v$ are both parameters tuning this regression model.
+- $\beta$ is a weight vector which indicates the dependence between input and the performance of model.
+  - e.g. $\beta_{13}$ is bigger, $x_{13}$ has more significant effect on the model
+  - e.g. $\beta_{27}$ is smaller, $x_{27}$ has less effect on the model
 
 
 
-:pushpin: ****
+:pushpin: **Simplified Regression Model Notation**
+
+Although I think this notation is kind of useless, the following is its equation.
+$$
+\hat{y}=x^T\beta+v=\begin{bmatrix}1\\x\end{bmatrix}^T\begin{bmatrix}v\\\beta\end{bmatrix}
+$$
+The dimension of 
 
 
 
