@@ -797,6 +797,8 @@ $$
 
 ## 3.1. Norm
 
+### 3.1.1. Definition and Properties
+
 :pushpin: **Euclidean Norm(L-2 Norm)**
 
 Suppose:
@@ -830,16 +832,46 @@ The double bar notation indicates the norm of a vector is a (numerical) measure 
 
 :pushpin: **Properties of Norm**
 
-//TODO
+> ​	:one:*nonnegative homogeneity*非负齐次性
+
+$$
+\norm{\beta x} = \abs{\beta}\norm{x}
+$$
+
+> ​	:two:*Triangle Inequality* (subadditivity次可加性)
+
+$$
+\norm{x+y}\leq\norm{x}+\norm{y}
+$$
+
+> ​	:three:*Nonnegativity*
+
+$$
+\norm{x}\geq0
+$$
+
+> ​	:four:*Definiteness*
+
+$$
+\norm{x}=0, \text{only if }x=0
+$$
 
 
 
-:pushpin: ****
+:pushpin: **general norm**
+
+Any real-valued function of an $n$-vector that satisfies the **4** properties listed above is called a (**general**) norm. But usually, when talking about norm, we refer to *Euclidean norm*.
 
 
 
-:pushpin: ****
+### 3.1.2. Derivative of Norm(衍生物)
 
+There are a lot of concepts closely related to norm.
+
+:pushpin:**RMS(root-mean-square)**
+$$
+\bold{rms}(x)=\sqrt{\frac{x_1^2+\cdots+x_n^2}{n}}=\frac{\norm{x}}{\sqrt{n}}
+$$
 
 
 :pushpin: ****
