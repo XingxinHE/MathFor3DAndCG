@@ -864,7 +864,7 @@ Any real-valued function of an $n$-vector that satisfies the **4** properties li
 
 
 
-### 3.1.2. Derivative of Norm(衍生物)
+### 3.1.2. Descendant of Norm(衍生物)
 
 There are a lot of concepts closely related to norm.
 
@@ -873,16 +873,39 @@ $$
 \bold{rms}(x)=\sqrt{\frac{x_1^2+\cdots+x_n^2}{n}}=\frac{\norm{x}}{\sqrt{n}}
 $$
 
-
-:pushpin: ****
-
-
-
-:pushpin: ****
+The key idea of RMS is to <u>**compare norms of vectors with different dimensions**</u>.🌟
 
 
 
-:pushpin: ****
+:pushpin: **Norm of a sum**
+
+Suppose you have 2 vectors, $x$ and $y$. The norm of $x+y$ is:
+$$
+\norm{x+y}=\sqrt{\norm{x}^2+2x^Ty+\norm{y}^2}
+$$
+
+
+:pushpin: **Norm of a block vectors**
+
+Suppose you have a block vectors $d$ which is composed by $a,b,c$:
+$$
+d=\begin{matrix}a_1\\\vdots\\a_n\\b_1\\\vdots\\b_n\\c_1\\\vdots\\c_n\end{matrix}
+$$
+The norm-squared of a stacked vector is the sum of the norm-squared values of its subvectors:
+$$
+\norm{d}^2=d^Td=a^Ta+b^Tb+c^Tc=\norm{a}^2+\norm{b}^2+\norm{c}^2
+$$
+
+
+This philosophy always is treated as its reverse:  <u>the norm of a stacked vector</u> **is** <u>the norm of the vector formed from the norms of the subvectors</u>.
+$$
+\norm{(a,b,c)}=\sqrt{\norm{a}^2+\norm{b}^2+\norm{c}^2}=\norm{(\norm{a},\norm{b},\norm{c})}
+$$
+
+
+:pushpin: **Chebyshev Inequality**
+
+
 
 
 
