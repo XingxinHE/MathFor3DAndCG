@@ -220,14 +220,6 @@ $$
 $$
 
 
-
-
-
-
-
-
-
-
 ## 0.1. Continuity
 
 ### Summary⭐
@@ -308,11 +300,61 @@ if $f$ is a function which is continuous on the interval $[a,b]$ and $M$ lies be
 
 <img src="img/image-20220203130246703.png" alt="image-20220203130246703" style="zoom:67%;" />
 
+### Example
+
+📌**Example: Graph with Continuity**
+
+![img](img/images_u0lim2_continuitytest2.svg)
+
+| At     | Left-continuous | Right-continuous | Continuous | Removable Discontinuity | Jump Discontinuity |
+| ------ | --------------- | ---------------- | ---------- | ----------------------- | ------------------ |
+| $x=-2$ | ❌               | ❌                | ❌          | ⭕                       |                    |
+| $x=-1$ | ✔               | ✔                | ✔          |                         |                    |
+| $x=1$  | ❌               | ❌                | ❌          | ⭕                       |                    |
+| $x=3$  | ❌               | ✔                | ❌          |                         | ⭕                  |
+| $x=4$  | ✔               | ✔                | ✔          |                         |                    |
+
+
+
+📌**Example: $f,g$ not continuous, but $f+g$ might be continuous**
+
+In the summary section, we know that if the function $f$ and $g$ are continuous everywhere, then $f+g$ is continuous everywhere.
+
+But on the **contrary**, if $f,g$ are not continuous, $f+g$ might be continuous!
+$$
+\begin{align}
+f(x)&=\lfloor x \rfloor\\
+g(x)&=-\lfloor x \rfloor\\
+f(x)+g(x)&=\bold{0}
+\end{align}
+$$
+Constant $\bold{0}$ is continuous everywhere.
+
+
+
+### Misc
+
+📌**What makes the Intermediate Value Theorem a deep result?**
+
+The Intermediate Value Theorem is <u>**profound**</u> because it <u>takes information that is local</u> by nature, and allows you to <u>conclude a global result</u>. Continuity at a point is local information, because it only requires knowledge of the function's behavior near that point. But somehow, if we know this fact at every point on an interval, then the Intermediate Value Theorem tells us something about the overall, or global behavior - namely, that the function has to take on a particular value, or its graph has to cross a certain line.
+
 
 
 
 
 ## 0.2. Limits of quotients
+
+### Summary⭐
+
+
+
+### Example
+
+
+
+
+
+
 
 
 
