@@ -24,7 +24,7 @@ We write:
 $$
 f(x)\to R \space \text{as}\space x\to a^+\\
 \text{or}\\
-\lim_{x\to a^+}f(x)=R
+\lim_{x\to a^+}f(x)=R
 $$
 
 > ​	📍<u>Left-hand limit</u>
@@ -37,7 +37,7 @@ f(x)\to L \space \text{as} \space x\to a^-\\
 \text{or}\\
 \lim_{x\to a^-}f(x)=L
 $$
- 
+
 
 📌**Possible limit behaviors**
 
@@ -346,6 +346,24 @@ The Intermediate Value Theorem is <u>**profound**</u> because it <u>takes inform
 
 ### Summary⭐
 
+📌**Limit Law for Division**
+
+If:
+$$
+\lim_{x\to a}f(x)=L\quad\text{and } \lim_{x\to a}g(x)=M
+$$
+then:
+$$
+\begin{align}
+\text{If }&M\neq0,\text{then }\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}\\
+\text{If }&M=0,\text{but }L\neq0,\text{then }\lim_{x\to a}\frac{f(x)}{g(x)}\text{ does not exist}\\
+\text{If both }&M=0\text{ and }L=0,\text{then }\lim_{x\to a}\frac{f(x)}{g(x)}\text{might be exist, or it might not exist.}
+\end{align}
+$$
+Regarding the 3rd situation, More work is necessary to determine whether the last type of limit exists, and what it is if it does exist.
+
+
+
 
 
 ### Example
@@ -371,4 +389,3 @@ The Intermediate Value Theorem is <u>**profound**</u> because it <u>takes inform
         Coordinate Systems & Infinite Series
     </h1>
 </div>
-
