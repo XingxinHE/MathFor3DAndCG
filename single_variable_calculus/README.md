@@ -368,6 +368,34 @@ Regarding the 3rd situation, More work is necessary to determine whether the las
 
 ### Example
 
+📌**Example - Limit Laws**
+
+Suppose that:
+$$
+\lim_{x\to-1}f(x)=0, \lim_{x\to-1}g(x)=17, \lim_{x\to-1}h(x)=0
+$$
+We have:
+$$
+\begin{align}
+\lim_{x\to-1}g(x)h(x)&=0\\
+\lim_{x\to-1}\frac{g(x)}{f(x)}&=DNE\\
+\lim_{x\to-1}f(x)+g(x)+h(x)&=17\\
+\lim_{x\to-1}\frac{f(x)}{h(x)}&=\text{Cannot be determined based on the information given}\\
+\lim_{x\to-1}\frac{f(x)+h(x)}{g(x)}&=0
+\end{align}
+$$
+
+
+📌**Example - Division Limit**
+
+Calculate the following:
+$$
+\begin{align}
+\lim_{x\to0^+}\frac{2\cos x+1}{x^2+x}&=DNE\\
+\lim_{x\to2}\frac{1/x+x^2}{x-3}&=-4.5\\
+\lim_{x\to2}\frac{12/x-3x}{2-3x+x^2}&=\\
+\end{align}
+$$
 
 
 
