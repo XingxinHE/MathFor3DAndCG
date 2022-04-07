@@ -399,6 +399,26 @@ $$
 
 
 
+> ​	
+
+$$
+\begin{align}
+\lim_{x\to3}\frac{2x^2-10x+12}{x^3-6x^2+9x}&=\lim_{x\to3}\frac{2(x^2-5x+6)}{x(x^2-6x+9)}\\
+&=\lim_{x\to3}\frac{2(x-2)(x-3)}{x(x-3)^2}\\
+&=\lim_{x\to3}\frac{2(x-2)}{x(x-3)}\\
+\text{therefore, the result is }DNE
+\end{align}
+$$
+
+> ​	
+
+$$
+\begin{align}
+\lim_{x\to0}\frac{3x^3+x^2}{x^3+x^2+x}&=\lim_{x\to0}\frac{3x^2+x}{x^2+x+1}\\
+&=\lim_{x\to0}\frac{x(3x+1)}{}
+\end{align}
+$$
+
 
 
 
