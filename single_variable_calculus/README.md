@@ -49,9 +49,7 @@ $$
 | 4️⃣     | not exist❌       | not exist❌      | ❌oscillates and never settle down to a value | $f(x)=\sin(13/x)$<br>looks at $x=0$                          | ![image-20220203113840991](img/image-20220203113840991.png)  |
 
 
-$$
 
-$$
 
 
 📌**Limit Definition⭐**
@@ -332,6 +330,16 @@ Constant $\bold{0}$ is continuous everywhere.
 
 
 
+📌**Example: Suppose that $f(1)=2$ and $f(4)=4$ . Must the graph $f$ of intersect the line $y=3$?**
+
+![images_u0lim5_ivt2](img/images_u0lim5_ivt2.svg)
+
+Not really. Because it doesn't say this is a continuous function. Therefore the following function need not to intersect with the line.
+
+![images_u0lim5_ivtsol2](img/images_u0lim5_ivtsol2.svg)
+
+
+
 ### Misc
 
 📌**What makes the Intermediate Value Theorem a deep result?**
@@ -355,9 +363,9 @@ $$
 then:
 $$
 \begin{align}
-\text{If }&M\neq0,\text{then }\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}\\
-\text{If }&M=0,\text{but }L\neq0,\text{then }\lim_{x\to a}\frac{f(x)}{g(x)}\text{ does not exist}\\
-\text{If both }&M=0\text{ and }L=0,\text{then }\lim_{x\to a}\frac{f(x)}{g(x)}\text{might be exist, or it might not exist.}
+\text{Case 1: If }&M\neq0,\text{then }\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}\\
+\text{Case 2: If }&M=0,\text{but }L\neq0,\text{then }\lim_{x\to a}\frac{f(x)}{g(x)}\text{ does not exist}\\
+\text{Case 3: If both }&M=0\text{ and }L=0,\text{then }\lim_{x\to a}\frac{f(x)}{g(x)}\text{might be exist, or it might not exist.}
 \end{align}
 $$
 Regarding the 3rd situation, More work is necessary to determine whether the last type of limit exists, and what it is if it does exist.
@@ -386,37 +394,235 @@ $$
 $$
 
 
-📌**Example - Division Limit**
 
-Calculate the following:
+**📌Example of dealing with Case 3**
+
+Normally, when you encounter polynomial function, you would need a **<u>factorization</u>**.
+
+> ​	since $x^2+2x-3=0,\quad x^2-3x+2=0 \quad \text{when }x=0$, therefore we need to factorization.
+
 $$
 \begin{align}
-\lim_{x\to0^+}\frac{2\cos x+1}{x^2+x}&=DNE\\
-\lim_{x\to2}\frac{1/x+x^2}{x-3}&=-4.5\\
-\lim_{x\to2}\frac{12/x-3x}{2-3x+x^2}&=\\
+\lim_{x\to1}\frac{x^2+2x-3}{x^2-3x+2} &= \lim_{x\to1}\frac{(x-1)(x+3)}{(x-1)(x-2)}\\
+&=\lim_{x\to1}\frac{\cancel{(x-1)}(x+3)}{\cancel{(x-1)}(x-2)}\\
+&=-4
 \end{align}
 $$
 
 
 
-> ​	
+> ​	since $x+1=0,\quad x+\frac{1}{x}+2=0 \quad \text{when }x=-1$, therefore we need to factorization.
 
+$$
+\begin{align}
+\lim_{x\to-1}\frac{x+1}{x+\frac{1}{x}+2}&=\lim_{x\to-1}\frac{x(x+1)}{x(x+\frac{1}{x}+2)}\\
+&=\lim_{x\to-1}\frac{x^2+x}{x^2+1+2x}\\
+&=\lim_{x\to-1}\frac{x(x+1)}{(x+1)(x+1)}\\
+&=\lim_{x\to-1}\frac{x\cancel{(x+1)}}{(x+1)\cancel{(x+1)}}\\
+&=\lim_{x\to-1}\frac{-1}{0}\\
+&=DNE
+\end{align}
+$$
+
+
+
+
+
+📌**More Example - Division Limit**
+
+> ​	$\text{Case 1: If }&M\neq0,\text{then }\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}\\$
+
+$$
+\begin{align}
+\lim_{x\to2}\frac{1/x+x^2}{x-3}&=\frac{4.5}{-1}=-4.5\quad\text{(Case 1)}\\
+\end{align}
+$$
+
+
+
+> ​	$\text{Case 2: If }&M=0,\text{but }L\neq0,\text{then }\lim_{x\to a}\frac{f(x)}{g(x)}\text{ does not exist}\\$
+
+$$
+\begin{align}
+\lim_{x\to0^+}\frac{2\cos x+1}{x^2+x}&=\frac{2\cross1+1}{0+0} = DNE\quad\text{(Case 2)}\\
+\end{align}
+$$
+
+
+
+
+
+
+
+> ​	$\text{Case 3: If both }M=0\text{ and }L=0,\text{then }\lim_{x\to a}\frac{f(x)}{g(x)}\text{might be exist, or it might not exist.}$
+
+======>factorization
+$$
+\begin{align}
+\lim_{x\to2}\frac{12/x-3x}{2-3x+x^2}&=-6\quad\text{(Case 3, elaborate👇)}\\
+&=\lim_{x\to2}\frac{x(12/x-3x)}{x(2-3x+x^2)}\\
+&=\lim_{x\to2}\frac{12-3x^2}{x(x^2-3x+2)}\\
+&=\lim_{x\to2}-\frac{3x^2-12}{x(x^2-3x+2)}\\
+&=\lim_{x\to2}-\frac{3(x^2-4)}{x(x^2-3x+2)}\\
+&=\lim_{x\to2}-\frac{3(x+2)(x-2)}{x(x-1)(x-2)}\\
+&=\lim_{x\to2}-\frac{3(x+2)\cancel{(x-2)}}{x(x-1)\cancel{(x-2)}}\\
+&=\lim_{x\to2}-\frac{3(2+2)}{2(2-1)}=-6
+\end{align}
+$$
+
+
+
+======>factorization
 $$
 \begin{align}
 \lim_{x\to3}\frac{2x^2-10x+12}{x^3-6x^2+9x}&=\lim_{x\to3}\frac{2(x^2-5x+6)}{x(x^2-6x+9)}\\
 &=\lim_{x\to3}\frac{2(x-2)(x-3)}{x(x-3)^2}\\
 &=\lim_{x\to3}\frac{2(x-2)}{x(x-3)}\\
+&=\lim_{x\to3}\frac{2(3-2)}{3(3-3)}\\
+&=\lim_{x\to3}\frac{2\cross1}{0}\\
 \text{therefore, the result is }DNE
 \end{align}
 $$
 
-> ​	
 
+
+======>factorization
 $$
 \begin{align}
-\lim_{x\to0}\frac{3x^3+x^2}{x^3+x^2+x}&=\lim_{x\to0}\frac{3x^2+x}{x^2+x+1}\\
-&=\lim_{x\to0}\frac{x(3x+1)}{}
+\lim_{x\to0}\frac{3x^3+x^2}{x^3+x^2+x}&=\lim_{x\to0}\frac{x^2(3x+1)}{x^2(x+1+\frac{1}{x})}\\
+&=\lim_{x\to0}\frac{3x+1}{x+1+\frac{1}{x}}\\
+&=\lim_{x\to0}\frac{3\cross0+1}{0+1+\frac{1}{0}}\\
+&=\lim_{x\to0}\frac{1}{1+\infin}\\
+&=\text{because denominator is + infinity, therefore the whole is 0}\\
+&=0
 \end{align}
+$$
+
+
+
+======>factorization
+$$
+\begin{align}
+\lim_{x\to-1}\frac{2x^2+7x+5}{x+1} &= \lim_{x\to-1}\frac{2(x^2+\frac{7}{2}x+\frac{5}{2})}{x+1}\\
+&= \lim_{x\to-1}\frac{2(x+1)(x+\frac{5}{2})}{x+1}\\
+&= \lim_{x\to-1}\frac{2\cancel{(x+1)}(x+\frac{5}{2})}{\cancel{x+1}}\\
+&= \lim_{x\to-1}2(-1+\frac{5}{2})=3\\
+\end{align}
+$$
+
+
+
+
+
+
+
+**📌$DNE$ Speaking in <u>both</u> left-hand <u>and</u> right-hand**
+
+> ​	Q: Given the results for $\lim_{x\to0^-}\frac{1}{x}$ and $\lim_{x\to0^+}\frac{1}{x}$, what should we say about $\lim_{x\to0}\frac{1}{x}$?
+
+> ​	A: The limit does not exist($DNE$), and it is neither $+\infin$ nor $-\infin$. Let's look at the graph.
+
+<img src="img/image-20220606101513491.png" alt="image-20220606101513491" style="zoom: 25%;" />
+
+
+
+**📌$DNE$ Speaking in <u>either</u> both left-hand <u>or</u> right-hand**
+
+We can split it into left-hand and right-hand which are:
+$$
+\lim_{x\to2^-} \frac{3x}{4-x^2} \text{and }\lim_{x\to2^+} \frac{3x}{4-x^2}
+$$
+
+The difference is that:
+
+- in $x\to2^-$, the result of $4-x^2$ is very close to $0$ but $4>x^2$(positive), therefore $\lim_{x\to2^-} \frac{3x}{4-x^2}=+\infin$
+- in $x\to2^+$, the result of $4-x^2$ is very close to $0$ but $4<x^2$(negative), therefore $\lim_{x\to2^+} \frac{3x}{4-x^2}=-\infin$
+
+And we can see it from the following graph:
+
+<img src="img/image-20220606103534159.png" alt="image-20220606103534159" style="zoom: 25%;" />
+
+
+
+## 0.3. Homework
+
+**📌Quiz**
+
+Why $x^{3/2}+4$ is not continuous?
+
+Because it is not defined where $x<0$ so therefore it is not continuous for all reall $x$.
+
+
+
+**📌Quiz**
+
+The root $a$ of a polynomial $p(x)$ has multiplicity $m$ if $(x-a)^m$ is the largest power of $x-a$ that is a factor of $p$. In other words, , $p(x)=(x-a)^ms(x)$where $s(x)$ is a polynomial for which $a$ is not a root.
+
+
+
+> ​	Description: The numerator and denominator <u>**can't not be canceled**</u> since the <u>root is different</u>!!
+
+
+
+Q1️⃣: If $a$ is a root of multiplicity 5 for the polynomial $p$, and a root of multiplicity 7 for the polynomial $q$, what might be $\lim_{x\to a}\frac{p(x)}{q(x)}$? 
+
+- [ ] 0
+- [ ] 1
+- [ ] -1
+- [ ] 3
+- [x] It does not exist
+
+> ​	Explain: The denominator wins in the race to 0 so the limit is not defined.
+
+
+
+Q2️⃣: If $a$ is a root of multiplicity 8 for the polynomial $p$, and a root of multiplicity 4 for the polynomial $q$, what might be $\lim_{x\to a}\frac{p(x)}{q(x)}$? 
+
+- [x] 0
+- [ ] 1
+- [ ] -1
+- [ ] 3
+- [ ] It does not exist
+
+> ​	Explain: The numerator wins the race to 0, so the limit is 0.
+
+
+
+Q3️⃣: If $a$ is a root of multiplicity 6 for the polynomial $p$, and a root of multiplicity 6 for the polynomial $q$, what might be $\lim_{x\to a}\frac{p(x)}{q(x)}$? 
+
+- [ ] 0
+- [x] 1
+- [x] -1
+- [x] 3
+- [ ] It does not exist
+
+> ​	Explain: Both numerator and denominator are competing in the race towards zero, so the limit could be any finite, nonzero number!
+
+
+
+
+
+**📌Quiz**
+
+Let $f(x)=\frac{x-\sqrt[3]x+\cos x}{x^2-4}$ We have calculated the following values of $f$:
+$$
+\begin{align}
+f(-3)&=-.51\\
+f(-2.25)&=-1.48\\
+f(-1.5)&=.16\\
+f(-.75)&=-.26\\
+f(0)&=-.25\\
+f(.75)&=-.17\\
+f(1.5)&=-.24\\
+f(2.25)&=.29\\
+f(3)&=.11\\
+\end{align}
+$$
+The number of roots of $f$ is **<u>at least</u>** **1**.
+
+We know that this function is not continuous at $\pm2$ and therefore we need to consider that dividing the region into:
+$$
+(-\infin,-2),(-2,2),(2,+\infin)
 $$
 
 

@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.48.5 r10040"
+   width="358.20898"
+   height="306.43155"
+   sodipodi:docname="u0lim5_ivtsol2.svg">
+  <metadata
+     id="metadata168">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="708"
+     inkscape:window-height="480"
+     id="namedview166"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1"
+     inkscape:cx="143.94406"
+     inkscape:cy="140.25044"
+     inkscape:window-x="80"
+     inkscape:window-y="257"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g6" />
+  <g
+     transform="translate(-66,-5)"
+     id="g4">
+    <g
+       clip-path="url(#cp1)"
+       id="g6">
+      <clipPath
+         id="cp1">
+        <polygon
+           points="426,5 66,5 66,315 426,315 "
+           id="polygon9" />
+      </clipPath>
+      <ellipse
+         cx="163"
+         cy="167"
+         rx="4.44875"
+         ry="4.44875"
+         id="ellipse11"
+         d="m 167.44875,167 c 0,2.45698 -1.99177,4.44875 -4.44875,4.44875 -2.45698,0 -4.44875,-1.99177 -4.44875,-4.44875 0,-2.45698 1.99177,-4.44875 4.44875,-4.44875 2.45698,0 4.44875,1.99177 4.44875,4.44875 z"
+         sodipodi:cx="163"
+         sodipodi:cy="167"
+         sodipodi:rx="4.44875"
+         sodipodi:ry="4.44875"
+         style="fill:#ff0000;stroke:none" />
+      <ellipse
+         cx="357"
+         cy="37"
+         rx="4.44875"
+         ry="4.44875"
+         id="ellipse13"
+         d="m 361.44875,37 c 0,2.456977 -1.99177,4.44875 -4.44875,4.44875 -2.45698,0 -4.44875,-1.991773 -4.44875,-4.44875 0,-2.456977 1.99177,-4.44875 4.44875,-4.44875 2.45698,0 4.44875,1.991773 4.44875,4.44875 z"
+         sodipodi:cx="357"
+         sodipodi:cy="37"
+         sodipodi:rx="4.44875"
+         sodipodi:ry="4.44875"
+         style="fill:#ff0000;stroke:none" />
+      <polyline
+         points="66.1,102.164 69.5929,102.164 73.0858,102.164 80.6593,102.164 87.7308,102.164 94.6637,102.164 102.184,102.164 109.203,102.164 116.809,102.164 124.276,102.164 131.242,102.164 138.795,102.164 145.847,102.164 152.759,102.164 160.259,102.164 167.258,102.164 174.844,102.164 182.291,102.164 189.236,102.164 196.769,102.164 203.8,102.164 211.419,102.164 218.899,102.164 225.877,102.164 233.443,102.164 240.507,102.164 247.432,102.164 254.944,102.164 261.955,102.164 269.554,102.164 277.014,102.164 283.971,102.164 291.517,102.164 298.56,102.164 305.465,102.164 312.958,102.164 319.948,102.164 327.527,102.164 334.603,102.164 341.541,102.164 349.066,102.164 356.089,102.164 363.7,102.164 371.172,102.164 378.143,102.164 385.701,102.164 392.757,102.164 399.674,102.164 407.179,102.164 414.182,102.164 418.091,102.164 422,102.164 "
+         id="polyline15"
+         style="fill:none;stroke:#0000ff;stroke-width:2.5;stroke-opacity:1;stroke-dasharray:5,5;stroke-miterlimit:4;stroke-dashoffset:0" />
+      <polyline
+         points="66.1,199.227 66.1685,199.204 66.2369,199.182 66.3739,199.136 66.6478,199.045 67.1955,198.862 68.291,198.497 70.482,197.767 75.2326,196.183 79.6684,194.704 84.0172,193.255 88.7346,191.682 93.1372,190.215 97.9083,188.624 102.592,187.063 106.962,185.607 111.7,184.027 116.123,182.553 120.459,181.108 125.164,179.539 129.553,178.076 134.312,176.49 138.983,174.933 143.34,173.481 148.065,171.906 152.476,170.435 157.255,168.842 161.947,167.278 166.324,165.819 171.07,164.237 175.501,162.76 179.844,161.312 184.557,159.742 188.955,158.276 193.721,156.687 198.4,155.127 202.765,153.672 207.498,152.095 211.916,150.622 216.247,149.178 220.947,147.612 225.332,146.15 230.086,144.565 234.525,143.086 238.876,141.635 243.597,140.062 248.002,138.593 252.776,137.002 257.464,135.439 261.836,133.982 266.577,132.402 271.003,130.926 275.342,129.48 280.05,127.911 284.443,126.446 284.519,126.421 284.596,126.395 284.749,126.344 285.056,126.242 285.669,126.038 286.894,125.629 286.971,125.604 287.048,125.578 287.201,125.527 287.507,125.425 288.12,125.22 288.197,125.195 288.274,125.169 288.427,125.118 288.733,125.016 288.81,124.991 288.887,124.965 289.04,124.914 289.116,124.888 289.193,124.863 289.27,124.837 289.346,124.812 "
+         id="polyline17"
+         style="fill:none;stroke:#808080;stroke-width:2.1875;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <polyline
+         points="295.817,68.1914 295.856,68.172 295.895,68.1527 295.972,68.114 296.127,68.0366 296.436,67.8818 297.056,67.5722 298.294,66.953 300.979,65.6104 303.486,64.3568 305.944,63.1278 308.611,61.7946 311.099,60.5504 313.796,59.2021 316.443,57.8783 318.913,56.6435 321.591,55.3045 324.091,54.0545 326.542,52.8291 329.201,51.4995 331.682,50.2589 334.372,48.9141 337.012,47.5939 339.475,46.3627 342.145,45.0273 344.638,43.7809 347.339,42.4303 349.991,41.1043 352.466,39.8672 355.148,38.5261 357.652,37.2738 360.108,36.0462 362.771,34.7144 365.257,33.4716 367.951,32.1246 370.596,30.8021 373.063,29.5687 375.738,28.2311 378.235,26.9825 380.683,25.7584 383.34,24.4302 385.818,23.191 388.505,21.8475 391.014,20.5931 393.473,19.3633 396.142,18.0292 398.632,16.7842 401.33,15.435 403.979,14.1103 406.451,12.8747 409.13,11.5349 411.632,10.284 414.085,9.05774 416.745,7.72731 419.228,6.48585 419.272,6.46419 419.315,6.44254 419.402,6.39923 419.575,6.31261 419.921,6.13938 420.614,5.79292 420.657,5.77127 420.701,5.74962 420.787,5.70631 420.961,5.61969 421.307,5.44646 421.35,5.42481 421.394,5.40315 421.48,5.35985 421.654,5.27323 421.697,5.25158 421.74,5.22992 421.827,5.18662 421.87,5.16496 421.913,5.14331 421.957,5.12166 422,5.1 "
+         id="polyline19"
+         style="fill:none;stroke:#808080;stroke-width:2.1875;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <ellipse
+         cx="293"
+         cy="70"
+         rx="2.20011"
+         ry="2.20011"
+         id="ellipse21"
+         d="m 295.20011,70 c 0,1.215087 -0.98502,2.20011 -2.20011,2.20011 -1.21509,0 -2.20011,-0.985023 -2.20011,-2.20011 0,-1.215087 0.98502,-2.20011 2.20011,-2.20011 1.21509,0 2.20011,0.985023 2.20011,2.20011 z"
+         sodipodi:cx="293"
+         sodipodi:cy="70"
+         sodipodi:rx="2.20011"
+         sodipodi:ry="2.20011"
+         style="fill:none;stroke:#808080;stroke-width:2;stroke-opacity:1" />
+      <ellipse
+         cx="293"
+         cy="70"
+         rx="0.905927"
+         ry="0.905927"
+         id="ellipse23"
+         d="m 293.90593,70 c 0,0.50033 -0.4056,0.905927 -0.90593,0.905927 -0.50033,0 -0.90593,-0.405597 -0.90593,-0.905927 0,-0.50033 0.4056,-0.905927 0.90593,-0.905927 0.50033,0 0.90593,0.405597 0.90593,0.905927 z"
+         sodipodi:cx="293"
+         sodipodi:cy="70"
+         sodipodi:rx="0.905927"
+         sodipodi:ry="0.905927"
+         style="fill:none;stroke:#808080;stroke-width:2;stroke-opacity:1" />
+      <ellipse
+         cx="293"
+         cy="70"
+         rx="3.88255"
+         ry="3.88255"
+         id="ellipse25"
+         d="m 296.88255,70 c 0,2.144273 -1.73828,3.88255 -3.88255,3.88255 -2.14427,0 -3.88255,-1.738277 -3.88255,-3.88255 0,-2.144273 1.73828,-3.88255 3.88255,-3.88255 2.14427,0 3.88255,1.738277 3.88255,3.88255 z"
+         sodipodi:cx="293"
+         sodipodi:cy="70"
+         sodipodi:rx="3.88255"
+         sodipodi:ry="3.88255"
+         style="fill:none;stroke:#808080;stroke-width:2;stroke-opacity:1" />
+      <ellipse
+         cx="293"
+         cy="124"
+         rx="3.88255"
+         ry="3.88255"
+         id="ellipse27"
+         d="m 296.88255,124 c 0,2.14427 -1.73828,3.88255 -3.88255,3.88255 -2.14427,0 -3.88255,-1.73828 -3.88255,-3.88255 0,-2.14427 1.73828,-3.88255 3.88255,-3.88255 2.14427,0 3.88255,1.73828 3.88255,3.88255 z"
+         sodipodi:cx="293"
+         sodipodi:cy="124"
+         sodipodi:rx="3.88255"
+         sodipodi:ry="3.88255"
+         style="fill:none;stroke:#808080;stroke-width:2;stroke-opacity:1" />
+      <polyline
+         points="163.164,296.291 163.164,292.291 "
+         id="polyline29"
+         style="fill:none;stroke:#000000;stroke-width:0.2px;stroke-opacity:1" />
+    </g>
+    <g
+       transform="translate(160.16364,299.29091)"
+       clip-path="url(#cp2)"
+       id="g31">
+      <clipPath
+         id="cp2">
+        <polygon
+           points="6.83636,-1.29091 -1.16364,-1.29091 -1.16364,15.7091 6.83636,15.7091 "
+           id="polygon34" />
+      </clipPath>
+      <text
+         x="0"
+         y="12"
+         font-size="12px"
+         id="text36"
+         style="font-size:12px;fill:#000000;font-family:Times New Roman">1</text>
+    </g>
+    <g
+       clip-path="url(#cp3)"
+       id="g38">
+      <clipPath
+         id="cp3">
+        <polygon
+           points="426,5 66,5 66,315 426,315 "
+           id="polygon41" />
+      </clipPath>
+      <polyline
+         points="227.873,296.291 227.873,292.291 "
+         id="polyline43"
+         style="fill:none;stroke:#000000;stroke-width:0.2px;stroke-opacity:1" />
+    </g>
+    <g
+       transform="translate(224.87273,299.29091)"
+       clip-path="url(#cp4)"
+       id="g45">
+      <clipPath
+         id="cp4">
+        <polygon
+           points="7.12727,-1.29091 -0.872727,-1.29091 -0.872727,15.7091 7.12727,15.7091 "
+           id="polygon48" />
+      </clipPath>
+      <text
+         x="0"
+         y="12"
+         font-size="12px"
+         id="text50"
+         style="font-size:12px;fill:#000000;font-family:Times New Roman">2</text>
+    </g>
+    <g
+       clip-path="url(#cp5)"
+       id="g52">
+      <clipPath
+         id="cp5">
+        <polygon
+           points="426,5 66,5 66,315 426,315 "
+           id="polygon55" />
+      </clipPath>
+      <polyline
+         points="292.582,296.291 292.582,292.291 "
+         id="polyline57"
+         style="fill:none;stroke:#000000;stroke-width:0.2px;stroke-opacity:1" />
+    </g>
+    <g
+       transform="translate(289.58182,299.29091)"
+       clip-path="url(#cp6)"
+       id="g59">
+      <clipPath
+         id="cp6">
+        <polygon
+           points="7.41818,-1.29091 -0.581818,-1.29091 -0.581818,15.7091 7.41818,15.7091 "
+           id="polygon62" />
+      </clipPath>
+      <text
+         x="0"
+         y="12"
+         font-size="12px"
+         id="text64"
+         style="font-size:12px;fill:#000000;font-family:Times New Roman">3</text>
+    </g>
+    <g
+       clip-path="url(#cp7)"
+       id="g66">
+      <clipPath
+         id="cp7">
+        <polygon
+           points="426,5 66,5 66,315 426,315 "
+           id="polygon69" />
+      </clipPath>
+      <polyline
+         points="357.291,296.291 357.291,292.291 "
+         id="polyline71"
+         style="fill:none;stroke:#000000;stroke-width:0.2px;stroke-opacity:1" />
+    </g>
+    <g
+       transform="translate(354.29091,299.29091)"
+       clip-path="url(#cp8)"
+       id="g73">
+      <clipPath
+         id="cp8">
+        <polygon
+           points="6.70909,-1.29091 -1.29091,-1.29091 -1.29091,15.7091 6.70909,15.7091 "
+           id="polygon76" />
+      </clipPath>
+      <text
+         x="0"
+         y="12"
+         font-size="12px"
+         id="text78"
+         style="font-size:12px;fill:#000000;font-family:Times New Roman">4</text>
+    </g>
+    <g
+       clip-path="url(#cp9)"
+       id="g80">
+      <clipPath
+         id="cp9">
+        <polygon
+           points="426,5 66,5 66,315 426,315 "
+           id="polygon83" />
+      </clipPath>
+      <polyline
+         points="422,296.291 422,292.291 "
+         id="polyline85"
+         style="fill:none;stroke:#000000;stroke-width:0.2px;stroke-opacity:1" />
+    </g>
+    <g
+       transform="translate(419,299.29091)"
+       clip-path="url(#cp10)"
+       id="g87">
+      <clipPath
+         id="cp10">
+        <polygon
+           points="7,-1.29091 -1,-1.29091 -1,15.7091 7,15.7091 "
+           id="polygon90" />
+      </clipPath>
+      <text
+         x="0"
+         y="12"
+         font-size="12px"
+         id="text92"
+         style="font-size:12px;fill:#000000;font-family:Times New Roman">5</text>
+    </g>
+    <g
+       clip-path="url(#cp11)"
+       id="g94"
+       style="stroke-width:0.625;stroke-miterlimit:4;stroke-dasharray:none">
+      <clipPath
+         id="cp11">
+        <polygon
+           points="426,5 66,5 66,315 426,315 "
+           id="polygon97" />
+      </clipPath>
+      <polyline
+         points="66.1,296.291 422,296.291 "
+         id="polyline99"
+         style="fill:none;stroke:#000000;stroke-width:0.625;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+    </g>
+    <g
+       clip-path="url(#cp12)"
+       id="g101">
+      <clipPath
+         id="cp12">
+        <polygon
+           points="426,5 66,5 66,315 426,315 "
+           id="polygon104" />
+      </clipPath>
+      <polyline
+         points="98.4545,231.582 102.455,231.582 "
+         id="polyline106"
+         style="fill:none;stroke:#000000;stroke-width:0.2px;stroke-opacity:1" />
+    </g>
+    <g
+       transform="translate(89.454545,224.08182)"
+       clip-path="url(#cp13)"
+       id="g108">
+      <clipPath
+         id="cp13">
+        <polygon
+           points="6.54545,-1.08182 -1.45455,-1.08182 -1.45455,15.9182 6.54545,15.9182 "
+           id="polygon111" />
+      </clipPath>
+      <text
+         x="0"
+         y="12"
+         font-size="12px"
+         id="text113"
+         style="font-size:12px;fill:#000000;font-family:Times New Roman">1</text>
+    </g>
+    <g
+       clip-path="url(#cp14)"
+       id="g115">
+      <clipPath
+         id="cp14">
+        <polygon
+           points="426,5 66,5 66,315 426,315 "
+           id="polygon118" />
+      </clipPath>
+      <polyline
+         points="98.4545,166.873 102.455,166.873 "
+         id="polyline120"
+         style="fill:none;stroke:#000000;stroke-width:0.2px;stroke-opacity:1" />
+    </g>
+    <g
+       transform="translate(89.454545,159.37273)"
+       clip-path="url(#cp15)"
+       id="g122">
+      <clipPath
+         id="cp15">
+        <polygon
+           points="6.54545,-1.37273 -1.45455,-1.37273 -1.45455,15.6273 6.54545,15.6273 "
+           id="polygon125" />
+      </clipPath>
+      <text
+         x="0"
+         y="12"
+         font-size="12px"
+         id="text127"
+         style="font-size:12px;fill:#000000;font-family:Times New Roman">2</text>
+    </g>
+    <g
+       clip-path="url(#cp16)"
+       id="g129">
+      <clipPath
+         id="cp16">
+        <polygon
+           points="426,5 66,5 66,315 426,315 "
+           id="polygon132" />
+      </clipPath>
+      <polyline
+         points="98.4545,102.164 102.455,102.164 "
+         id="polyline134"
+         style="fill:none;stroke:#000000;stroke-width:0.2px;stroke-opacity:1" />
+    </g>
+    <g
+       transform="translate(89.454545,94.663636)"
+       clip-path="url(#cp17)"
+       id="g136">
+      <clipPath
+         id="cp17">
+        <polygon
+           points="6.54545,-0.663636 -1.45455,-0.663636 -1.45455,16.3364 6.54545,16.3364 "
+           id="polygon139" />
+      </clipPath>
+      <text
+         x="0"
+         y="12"
+         font-size="12px"
+         id="text141"
+         style="font-size:12px;fill:#000000;font-family:Times New Roman">3</text>
+    </g>
+    <g
+       clip-path="url(#cp18)"
+       id="g143">
+      <clipPath
+         id="cp18">
+        <polygon
+           points="426,5 66,5 66,315 426,315 "
+           id="polygon146" />
+      </clipPath>
+      <polyline
+         points="98.4545,37.4545 102.455,37.4545 "
+         id="polyline148"
+         style="fill:none;stroke:#000000;stroke-width:0.2px;stroke-opacity:1" />
+    </g>
+    <g
+       transform="translate(89.454545,29.954545)"
+       clip-path="url(#cp19)"
+       id="g150">
+      <clipPath
+         id="cp19">
+        <polygon
+           points="6.54545,-0.954545 -1.45455,-0.954545 -1.45455,16.0455 6.54545,16.0455 "
+           id="polygon153" />
+      </clipPath>
+      <text
+         x="0"
+         y="12"
+         font-size="12px"
+         id="text155"
+         style="font-size:12px;fill:#000000;font-family:Times New Roman">4</text>
+    </g>
+    <g
+       clip-path="url(#cp20)"
+       id="g157"
+       style="stroke-width:0.625;stroke-miterlimit:4;stroke-dasharray:none">
+      <clipPath
+         id="cp20">
+        <polygon
+           points="426,5 66,5 66,315 426,315 "
+           id="polygon160" />
+      </clipPath>
+      <polyline
+         points="98.4545,296.291 98.4545,5.1 "
+         id="polyline162"
+         style="fill:none;stroke:#000000;stroke-width:0.625;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+    </g>
+  </g>
+  <defs
+     id="defs164" />
+</svg>
