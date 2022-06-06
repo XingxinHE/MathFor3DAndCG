@@ -124,7 +124,6 @@ L\begin{cases}x=0\\x=0.5\\x=0.9\\x=0.99\end{cases}
 R\begin{cases}x=2\\x=1.5\\x=1.1\\x=1.01\end{cases}
 $$
 
-
 <img src="img/image-20220203110856068.png" alt="image-20220203110856068" style="zoom: 80%;" />
 
 
@@ -628,6 +627,596 @@ $$
 
 
 
+# 1.Derivative
+
+## 1.0. What is Derivative?
+
+### Summary⭐
+
+**📌Definition of the derivative**
+
+The **derivative** of a function $f(x)$ at a point $x=a$ is defined to be:
+$$
+f'(a)=\lim_{b\to a}\frac{f(b)-f(a)}{b-a}
+$$
+There is also an alternative definition:
+$$
+f'(a)=\lim_{h\to0}\frac{f(a+h)-f(a)}{h}
+$$
+
+
+**📌The Philosophy of Derivative**
+
+We care about the <u>derivative</u> of $f(x)$ at $x=a$ is <u>**instant rate of change**</u> of $f(x)$ at $x=a$.
+
+
+
+### Example
+
+We will take a look on the following example:
+
+<img src="img/image-20220606135203886.png" alt="image-20220606135203886" style="zoom:33%;" />
+
+> ​	Q: the average velocity between $t=0$ and $t=1$
+
+That would be:
+$$
+\begin{align}
+\text{average velocity}&=\frac{f(1)-f(0)}{1-0}\\
+&=\frac{100+20\cross1-5\cross1^2-(100+20\cross0-5\cross0^2)}{1}\\
+&=15\text{m/s}
+\end{align}
+$$
+
+> ​	Q: instantaneous velocity at $t=1$
+
+That would be:
+$$
+\begin{align}
+\text{instantaneous velocity}&=f'(1)\\&=\lim_{b\to1}\frac{f(b)-f(1)}{b-1}\\
+&=\lim_{b\to1}\frac{100+20b-5b^2-(100+20-5)}{b-1}\\
+&=\lim_{b\to1}\frac{20b-5b^2-15}{b-1}\\
+&=\lim_{b\to1}\frac{-5(b^2-4b+3)}{b-1}\\
+&=\lim_{b\to1}\frac{-5(b-1)(b-3)}{b-1}\\
+&=\lim_{b\to1}\frac{-5\cancel{(b-1)}(b-3)}{\cancel{b-1}}\\&=-5\cross(-2)=10\text{ m/s}
+\end{align}
+$$
+
+### Misc
+
+Calculus is all about variables changing.
+
+
+
+## 1.1. Geometric interpretation of the derivative
+
+### Summary⭐
+
+**📌3 Main Interpretation of Derivative**
+
+There are:
+
+- physical -  instantaneous rate of change.
+- geometrical - the slope of the tangent line.
+- sensitive - the sensitivity of a function to small changes.
+
+
+
+**📌Tangent Line**
+
+> ​	Definition
+
+The **tangent line** to a function $f(x)$ at the point $x=a$ is the line that passes through the point $(a,f(a))$, and whose slope is the instantaneous rate of change of $f(x)$ at the point $x=a$. This slope is the slope of the line you get <u>**if you imagine zooming in on the function until it looks like a line**</u>.
+
+Property of a tangent line:
+
+- Point $(a,f(a))$
+- Slope $m, \text{where }m=f'(a)$
+
+Diagram:
+
+<div align="center">
+    <figure>
+        <img src="img/images_u1der2_sincrossline.svg" style="width:30%" align="center">
+        <figcaption>Is Not a tangent line</figcaption>
+	</figure>
+    <figure>
+        <img src="img/images_u1der2_infiniteintersectiontanline.svg" style="width:30%" align="center">
+        <figcaption>Is a tangent line</figcaption>
+	</figure>
+</div>
+
+
+**📌Secant Line**
+
+> ​	Definition
+
+The **secant line** of a function $f(x)$ over the interval $a\leq x\leq b$, is the line that passes through the points $(a,f(a))$ and $(b,f(b))$.
+
+
+
+> ​	Slope
+
+The slope of the secant line is 
+$$
+\text{slope}=\frac{\Delta y}{\Delta x}=\frac{f(b)-f(a)}{b-a}
+$$
+, which is the <u>**average rate of change**</u> of the function $f(x)$ over the interval $a\leq x\leq b$.
+
+
+
+> ​	Equation
+
+The equation for the secant line is:
+$$
+y=\frac{f(b)-f(a)}{b-a}(x-a)+f(a)
+$$
+
+
+> ​	Chinese Name
+
+The secant line in Chinese is "正切线".
+
+
+
+> ​	Diagram
+
+<div align="center">
+    <figure>
+        <img src="img/image-20220606145210683.png" style="width:60%" align="center">
+        <figcaption>A secant line</figcaption>
+</figure>
+</div>
+
+
+
+
+**📌The effect of adding $\lim_{b\to a}$**
+
+Math is amazing, these different interpretation somehow are correlated altogether!! If we were speaking in the philosophy of "limit", everything is different and fun!
+$$
+\begin{align}
+\text{geometric: }&  &\text{slope of secant line}\quad&\text{---}\lim_{b\to a}\text{-->} &\text{slope of tangent line}\\
+\text{symbolic: }&   &\frac{f(b)-f(a)}{b-a}\quad&\text{---}\lim_{b\to a}\text{-->} &f'(a)\\
+\text{physical: }&   &\text{average rate of change}\quad&\text{---}\lim_{b\to a}\text{-->} &\text{instantaneous rate of change}\\
+\end{align}
+$$
+
+
+
+**📌Relationship: Differentiable vs. Continuous**
+
+The following is true.✔
+$$
+\text{function is continuous at x=a}\in\text{function is differentiable at x=a}
+$$
+However, the reverse is wrong.❌ Look at $x=0$ at $f(x)=\abs{x}$
+
+<div align="center">
+    <figure>
+        <img src="img/image-20220606163726903.png" style="width:20%" align="center">
+        <figcaption>Function is continuous but not differentiable at x=0</figcaption>
+</figure>
+</div>
+
+
+
+
+
+**📌Relationship: Tangent Line vs. Derivative**
+
+The following is true:✔
+$$
+\text{function has a tangent line at x=a}\in\text{function has derivative  at x=a}
+$$
+However, the reverse is wrong.❌ Look at $x=0$ at $f(x)=\sqrt[3]{x}$
+
+<div align="center">
+    <figure>
+        <img src="img/image-20220606160239384.png" style="width:30%" align="center">
+        <figcaption>Function has a tangent line but not differentiable at x=0</figcaption>
+</figure>
+</div>
+
+
+
+
+
+
+
+
+### Example
+
+**📌Example on Limits, Continuous, and Differentiable**
+
+Let's look at the $x=0$ of the following function $f(x)=\abs{x}$:
+
+<div align="center">
+    <figure>
+        <img src="img/images_u1der2_absolute.svg" style="width:30%" align="center">
+        <figcaption>Absolute function</figcaption>
+</figure>
+</div>
+
+> ​	Limits✔:
+
+The <u>left-hand limit</u> and <u>right-hand limit</u> are the same. Therefore the limit at $x=0$ exist.
+$$
+\begin{align}
+\lim_{x\to0^-}\abs{x}=0\\
+\lim_{x\to0^+}\abs{x}=0\\
+\lim_{x\to0}\abs{x}=0\\
+\end{align}
+$$
+
+
+> ​	Continuous✔:
+
+Since
+$$
+\lim_{x\to0^-}\abs{x}=0=\lim_{x\to0^+}\abs{x}=f(x)=0
+$$
+Therefore the function is continuous.
+
+
+
+> ​	Differentiable❌:
+
+It is not differentiable at $x=0$, because
+$$
+\begin{align}
+\lim_{x\to0^-}\frac{\abs{x}-0}{x-0}&=-1\\
+\lim_{x\to0^+}\frac{\abs{x}-0}{x-0}&=1\\
+\end{align}
+$$
+We have a name of the preceding derivative:
+
+- <u>**left-sided derivative**</u>, denoted as $f'(0^-)=\lim_{x\to0^-}\frac{f(x)-f(x)}{x-0}$
+- <u>**right-sided derivative**</u>, denoted as $f'(0^+)=\lim_{x\to0^+}\frac{f(x)-f(x)}{x-0}$
+
+
+
+**📌Example - Derivative of a Jump Discontinuity Function**
+
+Take a look at the following function:
+
+<div align="center">
+    <figure>
+        <img src="img/images_u1der2_heavyside.svg" style="width:30%" align="center">
+        <figcaption>Jump Discontinuity Function</figcaption>
+</figure>
+</div>
+
+The <u>**right-sided derivative**</u> is easy, which is:
+$$
+f'(0^+)=1
+$$
+However, we sometime may make mistake on the <u>**left-sided derivative**</u>:
+$$
+f'(0^-)=\infin
+$$
+It is infinity rather 0!! Why? Please recall how to calculate the derivative - some value close to $x=0$ and $x=-0.001$, that line is <u>**hell vertical line**</u>😲😲! The similar function is the following:
+$$
+f(x) = \sqrt[3]{x}
+$$
+
+<div align="center">
+    <figure>
+        <img src="img/image-20220606160239384.png" style="width:30%" align="center">
+        <figcaption>Vertical tangent line at x=0</figcaption>
+</figure>
+</div>
+
+Therefore it is not differentiable at $x=0$.
+
+
+
+**📌Example on Derivative**
+
+<div align="center">
+    <figure>
+        <img src="img/images_u1der2_tangentlines.svg" style="width:30%" align="center">
+</figure>
+</div>
+
+The following are the derivatives:
+$$
+\begin{align}
+f'(-1)&=DNE\\
+f'(0)&=0\\
+f'(1)&=DNE\\
+f'(2)&=DNE\\
+f'(3)&=1/3\\
+\end{align}
+$$
+
+
+### Misc
+
+**📌Interpretation of Linear Equation[^1]**
+
+If I recall the derivative in my college, I remember that the derivative of a linear function is a constant. Before this class, I only 死记硬背 this rule. But now I can see in the geometrical perspective.
+
+<div align="center">
+    <figure>
+        <img src="img/image-20220606153110348.png" style="width:30%" align="center">
+        <figcaption>Linear equation</figcaption>
+</figure>
+</div>
+
+
+Because <u>**the slope is always the same**</u> no matter what $x$ is, therefore the derivative of <u>a linear equation is a constant</u>.
+
+
+
+**📌Review Questions**
+
+> Q: If it exists, the derivative of a function at a point is a:
+
+- [ ] Line
+- [x] Number
+- [ ] Point
+- [ ] Function
+
+The derivative at a point is related to the tangent line at that point, but <u>**it is not the line itself**</u> - it is **the line's slope**. That's a number.
+
+
+
+> ​	Q: True or false: A tangent line to the graph of $f$ at $(a,f(a))$ can cross the graph of $f$ at that point.
+
+True.
+
+<div align="center">
+    <figure>
+        <img src="img/images_u1der2_tangentcross.png" style="width:30%" align="center">
+</figure>
+</div>
+
+Consider the graph of $y=x^3+3$, and the tangent line at $(0,3)$, which has slope zero and crosses the graph.
+
+
+
+
+
+
+
+
+
+## 1.2. The derivative as a function
+
+### Summary⭐
+
+**📌Function and Graph**
+
+In calculus, we often think of <u>the function</u> and <u>its graph</u> as being <u>**the same object**</u>. Therefore, we should think of the derivative of a function as a function as well.
+
+
+
+### Example
+
+Please take a look at the following example:
+
+<div align="center">
+    <figure>
+        <img src="img/images_u1der3_secondexample.svg" style="width:30%" align="center">
+        <figcaption>function f(x)</figcaption>
+</figure>
+    <figure>
+    <img src="img/images_u1der3_2ndexamplederivativecomplete.svg" style="width:30%" align="center">
+        <figcaption>the derivative function f'(x) of function f(x)</figcaption>
+    </figure>
+</div>
+
+
+
+
+
+## 1.3. Calculating derivatives
+
+### Summary⭐
+
+**📌Delta Notation$\Delta$**
+
+We change the notation from:
+$$
+f'(x)=\lim_{b\to x}\frac{f(b)-f(x)}{b-x}\\
+$$
+to:
+$$
+f'(x)=\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\\
+$$
+
+
+
+
+**📌Derivatives and linearity**
+
+> ​	The constant factor rule
+
+If $g(x)=kf(x)$ for some constant $k$, then
+$$
+g'(x)=kf'(x)
+$$
+at all points where $f$ is differentiable.
+
+
+
+> ​	The sum rule
+
+If $h(x)=g(x)+f(x)$, then
+$$
+h'(x)=g'(x)+f'(x)
+$$
+at all points where $g$ and $f$ are differentiable.
+
+
+
+> ​	The subtraction rule
+
+If $h(x)=g(x)-f(x)$, then
+$$
+h'(x)=g'(x)-f'(x)
+$$
+at all points where $g$ and $f$ are differentiable.
+
+
+
+**📌What is linearity?**
+
+Respecting *addition*, *subtraction* and *constant multiplication* in the preceding definition is called “<u>**linearity**</u>," and it is an <u>important property of the derivative operation</u>!
+
+
+
+**📌The Power Rule**
+
+If $n$ is any fixed number, and
+$$
+f(x)=x^n
+$$
+then:
+$$
+f'(x)=nx^{n-1}
+$$
+
+
+
+
+**📌Derivatives of constant multiples proof**
+
+Suppose that $g(x)=kf(x)$for all $x$, where $k$ is a constant. We want to prove that $g'(x)=kf'(x)$ at any point $x$ where $f$ is differentiable.
+$$
+\begin{align}
+g'(x)&=\lim_{\Delta x\to0}\frac{g(x+\Delta x)-g(x)}{\Delta x}\\
+&=\lim_{\Delta x\to0}\frac{kf(x+\Delta x)-kf(x)}{\Delta x}\\
+&=\lim_{\Delta x\to0}k\frac{f(x+\Delta x)-f(x)}{\Delta x}\\
+&=\Big(\lim_{\Delta x\to0}k\Big)\Big(\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\Big)\\
+&=kf'(x)
+\end{align}
+$$
+
+
+
+
+### Example
+
+**📌Example - Calculate the Derivative Function**
+
+> ​	$f(x)=x^2$
+
+$$
+\begin{align}
+f'(x)&=\lim_{b\to x}\frac{f(b)-f(x)}{b-x}\\
+&=\lim_{b\to x}\frac{b^2-x^2}{b-x}\\
+&=\lim_{b\to x}\frac{(b-x)(b+x)}{b-x}\\
+&=\lim_{b\to x}\frac{\cancel{(b-x)}(b+x)}{\cancel{b-x}}\\
+&\text{because b is approaching x}\\
+&=x+x=2x
+\end{align}
+$$
+
+
+
+> ​	$g(x)=mx+b$
+
+$$
+\begin{align}
+g'(x)&=\lim_{c\to x}\frac{g(c)-g(x)}{c-x}\\
+&=\frac{mc+b-(mx+b)}{c-x}\\
+&=\frac{mc-mx}{c-x}\\
+&=\frac{m(c-x)}{c-x}\\
+&=\frac{m\cancel{(c-x)}}{\cancel{c-x}}\\&=m
+\end{align}
+$$
+
+
+
+> ​	$h(x)=\frac{1}{x^2}$
+
+$$
+\begin{align}
+h'(x)&=\lim_{\Delta x\to0}\frac{\frac{1}{(x+\Delta x)^2}-\frac{1}{x^2}}{\Delta x}\\
+&=\lim_{\Delta x\to0}\frac{\frac{x^2}{(x+\Delta x)^2x^2}-\frac{(x+\Delta x)^2}{x^2(x+\Delta x)^2}}{\Delta x}\\
+&=\lim_{\Delta x\to0}\frac{\frac{x^2-(x+\Delta x)^2}{(x+\Delta x)^2x^2}}{\Delta x}\\
+&=\lim_{\Delta x\to0}\frac{x^2-(x+\Delta x)^2}{(x+\Delta x)^2x^2\Delta x}\\
+&=\lim_{\Delta x\to0}\frac{x^2-(x^2+2x\Delta x+\Delta x^2)}{(x+\Delta x)^2x^2\Delta x}\\
+&=\lim_{\Delta x\to0}\frac{-2x\Delta x-\Delta x^2}{(x+\Delta x)^2x^2\Delta x}\\
+&=\lim_{\Delta x\to0}\frac{-2x\cancel{\Delta x}-\Delta x^{\cancel{2}}}{(x+\Delta x)^2x^2\cancel{\Delta x}}\\
+&=\lim_{\Delta x\to0}\frac{-2x-\Delta x}{(x+\Delta x)^2x^2}\\
+&=\lim_{\Delta x\to0}\frac{-2x-0}{(x+0)^2x^2}\\
+&=\lim_{\Delta x\to0}\frac{-2x}{x^4}\\
+&=\lim_{\Delta x\to0}-\frac{2}{x^3}\\
+\end{align}
+$$
+
+
+
+**📌Example - Calculate the tangent line**
+
+For the following function:
+$$
+f(x)=x^3-x
+$$
+Calculate the tangent line at the point $(2,f(2))=(2,6)$
+
+<div align="center">
+    <figure>
+        <img src="img/image-20220607003903977.png" style="width:30%" align="center">
+</figure>
+</div>
+
+To solve this, first we can calculate the derivative function first:
+$$
+\begin{align}
+f'(x)&=(x^3-x)'\\
+&=3x^2-1
+\end{align}
+$$
+Therefore,
+$$
+f'(2)=11=\text{slope}
+$$
+Then the tangent line can be written as:
+$$
+y=11x+b
+$$
+If we plug $(2,6)$ in it, we can solve the tangent line as:
+$$
+y=11x-16
+$$
+
+
+
+
+
+
+## 1.4. Leibniz notation
+
+### Summary⭐
+
+### Example
+
+### Misc
+
+## 1.5. Second derivatives and higher
+
+### Summary⭐
+
+### Example
+
+### Misc
+
+## 1.6. Trigonometric functions: sine and cosine
+
+### Summary⭐
+
+### Example
+
+### Misc
+
+## 1.7. Homework
+
+
+
 
 
 <div align="center">
@@ -643,3 +1232,9 @@ $$
         Coordinate Systems & Infinite Series
     </h1>
 </div>
+
+
+
+
+[^1]: 一元一次方程
+
