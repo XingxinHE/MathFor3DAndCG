@@ -1193,25 +1193,326 @@ $$
 
 ### Summary⭐
 
+
+
+**📌Why Leibniz notation?**
+
+The biggest reason is that <u>it reminds us what the input variable is</u>. The derivative is measuring the instantaneous rate of change of the output variable of a function with respect to the input variable. Sometimes, if there are lots of quantities that have variables representing them, it's easy to lose track of what is what; Leibniz notation helps to remind us.
+
+
+<div align="center">
+    <figure>
+    <img src="img/image-20220607102212246.png" style="width:50%" align="center">
+        <figcaption>Why Leibniz notation</figcaption>
+    </figure>
+</div>
+Take the preceding diagram as example, from left to right, we are interested in:
+
+- the relationship of <u>**area**</u> and <u>**radius**</u> as the radius grows
+- the relationship of <u>**area**</u> and <u>**circumference**</u> as the hot tube[^2]
+- the relationship of <u>**area**</u> and <u>**time**</u> as the water drops
+
+If we write in Newton notation, we need to configure 3 different function and 3 different derivative function.
+$$
+A=f(r), \quad f'(r)\\
+A=g(c), \quad g'(c)\\
+A=h(t), \quad h'(t)\\
+$$
+However, if we write into Leibniz format:
+$$
+\begin{align}
+\frac{dA}{dr}&,\text{ we know it respects to radius(r).}\\
+\frac{dA}{dc}&,\text{ we know it respects to circumference(c).}\\
+\frac{dA}{dt}&,\text{ we know it respects to time(t).}\\
+\end{align}
+$$
+
+
+
+
+**📌Properties of Leibniz notation🌟**
+
+There are few common properties of Leibniz notation.
+
+> ​	**Units:**
+
+If $P$ has units of pressure, and $t$ has units of <u>**time**</u>, then the following has units of pressure per time:
+$$
+\frac{dP}{dt}
+$$
+
+
+> ​	**Evaluating at points:**
+
+If we want to take the derivative at a particular point $x=3$, then we use the following notation. The bar is read as “<u>**evaluated at**</u>".
+$$
+\frac{df}{dx}\Bigg|_{x=3}
+$$
+
+
+> ​	**Derivatives act on functions:**
+
+We can write for the derivative of $x^2$ as:
+$$
+\frac{d(x^2)}{dx}
+$$
+If a formula is long, we can write:
+$$
+\frac{d}{dy}(y^3+2y^2)
+$$
+
+
+
+
 ### Example
 
-### Misc
+**📌Evaluate at certain point**
+
+> ​	Q: What is $\frac{d}{dz}(z^3+2z^2)|_{z=2}?$
+
+The derivative is:
+$$
+\frac{d}{dz}(z^3+2z^2)=3z^2+4z
+$$
+Therefore, when evaluate at $z=2$, the result is 20.
+
+
+
+**📌Leibniz Notation**
+
+> ​	Q: What does the letter $d$ in Leibniz's notation $\frac{df}{dx}$ stand for?
+
+The letter $d$ stands for <u>**the limit of a difference**</u>. In particular, the quantity $\frac{df}{dx}$ is the limit of the difference quotient $\lim_{\Delta x\to0}\frac{\Delta f}{\Delta x}$.
+
+
+
+
+
+**📌Circle Stuff**
+
+> ​	Q: the area of a circle $A$ in terms of the radius $r$.
+
+$$
+A=\pi r^2
+$$
+
+> ​	Q: $\frac{dA}{dr}$?
+
+$$
+\frac{dA}{dr}=2\pi r
+$$
+
+> ​	Q: $\frac{dA}{dr}|_{r=3}$?
+
+$$
+\frac{dA}{dr}|_{r=3}=2\pi*3=6\pi
+$$
+
+> ​	Q: How to take derivative evaluate circumference rather than radius $\frac{dA}{dc}$?
+
+First we write down the equation of $A$ with respect to $c$.
+$$
+\begin{align}
+A&=\pi r^2\\
+c&=2\pi r\\
+c^2&=(2\pi r)^2\\
+c^2&=(2\pi)^2r^2\\
+c^2&=4\pi^2r^2\\
+\frac{c^2}{4\pi}&=\pi r^2=A\\
+\end{align}
+$$
+Therefore, we know the area $A$ with respect to $c$ is:
+$$
+A = \frac{c^2}{4\pi}\\
+$$
+Hence, the derivative with respect to $c$ is:
+$$
+\frac{dA}{dc}=\frac{c}{2\pi}
+$$
+
+
+> ​	Q: Evaluate at $c=6\pi$
+
+$$
+\frac{dA}{dc}\Bigg|_{c=6\pi}=\frac{c}{2\pi}=\frac{6\pi}{2\pi}=3
+$$
+
+
 
 ## 1.5. Second derivatives and higher
 
 ### Summary⭐
 
+**📌Second derivative**
+
+The second derivative of a function $f(x)$ is the first derivative of $f'(x)$, and is denoted by:
+$$
+f''(x)\text{ or }\frac{d^2f}{dx^2}
+$$
+
+
+**📌Higher derivatives**
+
+The $n$th derivative of a function $f(x)$ is the first derivative of $f^{(n-1)}(x)$, and is denoted by:
+$$
+f^{(n)}(x)\text{ or }\frac{d^nf}{dx^n}
+$$
+
+
+**📌Second derivative and concavity summary**
+
+On intervals where $f''>0$, the function $f$ is concave up.
+
+<div align="center">
+    <figure>
+    <img src="img/images_u1der5_concaveupgraph.svg" style="width:20%" align="center">
+        <figcaption>concave up</figcaption>
+    </figure>
+</div>
+
+On intervals where $f''<0$, the function $f$ is concave down.
+
+<div align="center">
+    <figure>
+    <img src="img/images_u1der5_concavedowngraph.svg" style="width:20%" align="center">
+        <figcaption>concave down</figcaption>
+    </figure>
+</div>
+
+Points where the graph of a function changes from concave up to concave down, or vice versa, are called **inflection points**.
+
+
+
+**📌Position, velocity, acceleration**
+
+If $x(t)$ is a function that describes position as a function of time, then:
+
+- $x'(t)$ is the <u>**velocity**</u>
+- $x''(t)$ is the <u>**acceleration**</u>
+
+
+
+
+
 ### Example
 
-### Misc
+**📌Example - Sign of each functions**
+
+<div align="center">
+    <figure>
+    <img src="img/images_u1der5_exercisefunction.svg" style="width:35%" align="center">
+    </figure>
+</div>
+
+$$
+\begin{align}
+f'(-1)&=\text{negative}\\
+f''(-1)&=\text{zero}\\
+f'(2)&=\text{negative}\\
+f''(2)&=\text{positive}\\
+f'(3)&=\text{zero}\\
+f''(3)&=\text{positive}\\
+f'(5)&=\text{positive}\\
+f''(5)&=\text{positive}\\
+f'(7)&=\text{positive}\\
+f''(7)&=\text{negative}\\
+\end{align}
+$$
+
+
+
+**📌Example - Real world meaning**
+
+> ​	Q: What does it mean "Rate of job growth slows"? Let's elaborate in math.
+
+$$
+\underbrace{\text{Rate of job }}_{}\underbrace{\text{growth}}_{f'>0}\underbrace{\text{ slow}}_{f''<0}
+$$
+
+Therefore, we could have the following
+
+> ​	A: $+200,000$ jobs/month in first quarter, $+100,000$ jobs/month in second quarter.
+
+
+
+
+
+> ​	Q: What does it mean “Rate of population loss in Capitol City eases"?
+
+$$
+\underbrace{\text{Rate of population }}_{}\underbrace{\text{loss}}_{f'<0}\text{in Capitol City }\underbrace{\text{ eases}}_{f''>0}
+$$
+
+
 
 ## 1.6. Trigonometric functions: sine and cosine
 
 ### Summary⭐
 
+**📌Derivative of sine and cosine**
+
+The derivative of of the trig functions are:
+$$
+\begin{align}
+\frac{d}{dx}\sin(x)&=\cos(x)\\
+\frac{d}{dx}\cos(x)&=-\sin(x)\\
+\frac{d^2}{dx^2}\sin(x)&=-\sin(x)\\
+\frac{d^2}{dx^2}\cos(x)&=-\cos(x)\\
+\end{align}
+$$
+
+
+**📌Definition of significant figures**
+
+The number of *significant figures* is the count of those digits that carry meaning with regards to precision.
+
+
+
+
+
 ### Example
 
+**📌Example - Significant Figures**
+
+> ​	The "is"✔
+
+- All non-zero digits are significant: `1235` has 4 significant digits.
+- Zeros appearing between nonzero digits are significant: `101` has 3 significant digits.
+- Trailing zeros in a number containing a decimal are significant: `32.000` has 5 significant figures.
+
+> ​	The "is not"❌
+
+- Trailing zeros in a number with no decimal are *not* significant: `5400` has 2 significant figures.
+- Leading zeros in a decimal number are not significant: `0.0003` has 1 significant figure.
+- Extraneous digits introduced in a computation to greater precision than measured data are *not* significant: if `.25` and `.50` are measurements accurate to `.01`, then in the product `(.25)(.50) = 0.125` the last 5 is *not* significant.
+
+
+
+
+
 ### Misc
+
+**📌Derivative of Sine Proof**
+
+
+
+**📌Geometric Proof of Derivative of sine at 0**
+
+
+
+
+
+**📌Geometric Proof of Derivative of cosine at 0**
+
+
+
+
+
+
+
+
+
+
 
 ## 1.7. Homework
 
@@ -1237,4 +1538,6 @@ $$
 
 
 [^1]: 一元一次方程
+
+[^2]: 管子外面的一层层包裹起来，圆形面积也会grow起来。circumference是周长的意思。
 
