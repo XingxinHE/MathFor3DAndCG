@@ -1494,29 +1494,188 @@ The number of *significant figures* is the count of those digits that carry mean
 
 **📌Derivative of Sine Proof**
 
+We use this formula:
+$$
+\sin(a\pm b)=\sin(a)\cos(b)\pm\cos(a)\sin(b)
+$$
+The derivative of $\sin(x)$:
+$$
+\begin{align}
+\frac{d}{dx}\sin(x)&=\lim_{\Delta x\to0}\frac{f(\Delta x+x)-f(x)}{\Delta x}\\
+&=\lim_{\Delta x\to0}\frac{\sin(\Delta x+x)-\sin(x)}{\Delta x}\\
+&=\lim_{\Delta x\to0}\frac{\sin(x)\cos(\Delta x)+\cos(x)\sin(\Delta x)-\sin(x)}{\Delta x}\\
+&=\lim_{\Delta x\to0}\frac{[\sin(x)\cos(\Delta x)-\sin(x)]+\cos(x)\sin(\Delta x)}{\Delta x}\\
+&=\lim_{\Delta x\to0}\Bigg(\sin(x)\frac{\cos(\Delta x)-1}{\Delta x}+\cos(x)\frac{\sin(\Delta x)}{\Delta x}\Bigg)\\
+\end{align}
+$$
+Therefore, when $x=0$, it becomes:
+$$
+\begin{align}
+\frac{d\sin(x)}{dx}\Bigg|_{x=0}&=\sin(0)\frac{\cos(\Delta x)-1}{\Delta x}+\cos(0)\frac{\sin(\Delta x)}{\Delta x}\\
+&=\frac{\sin(\Delta x)}{\Delta x}
+\end{align}
+$$
+This can also apply to $\cos()$:
+$$
+\frac{d\cos(x)}{dx}\Bigg|_{x=0}=\frac{\cos(\Delta x)-1}{\Delta x}
+$$
+
+
+
+
 
 
 **📌Geometric Proof of Derivative of sine at 0**
+
+OK, now we know when $x=0$ we can write down the following formula:
+$$
+\begin{align}
+\frac{d\sin(x)}{dx}\Bigg|_{x=0}&=\frac{\sin(\Delta x)}{\Delta x}
+\end{align}
+$$
+However, the numerator and denominator are both zero. The MIT provided an excellent example to prove it.
+
+<div align="center">
+    <figure>
+    <img src="img/delta-sin-1.svg" style="width:35%" align="center">
+    </figure>
+</div>
+Let me briefly introduce the elements above:
+
+<div align="center">
+<p style="color:Green">A unit circle with r=1</p>
+<p style="color:Red">A secant line with</p>
+<p style="color:blue">Theta angle</p>
+<p style="color:Black">Arc length</p>
+<p style="color:Purple">The height</p>
+    </div>
+
+We are interested in:
+
+- the arc length
+- the height
+
+$$
+\begin{align}
+\text{the circumference of the circle }&=2\pi r=2\pi\cross1=2\pi\\
+\text{the arc length of angle }\theta&=2\pi\cross\frac{\theta}{2\pi}=\theta\\
+\text{the height}&=r\cross \sin(\theta)=\sin(\theta)
+\end{align}
+$$
+
+And we have:
+$$
+\begin{align}
+\frac{d\sin(x)}{dx}\Bigg|_{x=0}&=\frac{\sin(\Delta x)}{\Delta x}
+\end{align}
+$$
+Therefore we can see it as:
+$$
+\lim_{\theta\to0}\frac{\sin(\theta)}{\theta}
+$$
+The geometrical meaning can be like this:
+
+<div align="center">
+    <figure>
+    <div><img src="img/delta-sin-1.svg" style="width:35%" align="center"></div>
+    <div><img src="img/delta-sin-2.svg" style="width:35%" align="center"></div>
+    <div><img src="img/delta-sin-3.svg" style="width:35%" align="center"></div>
+    <div><img src="img/delta-sin-4.svg" style="width:35%" align="center"></div>
+    </figure>
+</div>
+Therefore, when $\theta$ getting smaller, the are equal!!
+$$
+\begin{align}
+\frac{d\sin(x)}{dx}\Bigg|_{x=0}&=\frac{\sin(\Delta x)}{\Delta x}=1
+\end{align}
+$$
+⚠It only applies to when the $\theta$ is measured in radians.
+
+
 
 
 
 
 
 **📌Geometric Proof of Derivative of cosine at 0**
+$$
+\frac{d\cos(x)}{dx}\Bigg|_{x=0}=\frac{\cos(\Delta x)-1}{\Delta x}
+$$
+We can see that:
 
+<div align="center">
+    <figure>
+    <div><img src="img/delta-cos-1.svg" style="width:35%" align="center"></div>
+    <div><img src="img/delta-cos-2.svg" style="width:35%" align="center"></div>
+    <div><img src="img/delta-cos-3.svg" style="width:35%" align="center"></div>
+    </figure>
+</div>
 
-
-
-
-
-
+The $1-\cos(\theta)$ is shrinking much faster than $\theta$!! Therefore:
+$$
+\frac{d\cos(x)}{dx}\Bigg|_{x=0}=\frac{\cos(\Delta x)-1}{\Delta x}=0
+$$
 
 
 
 
 ## 1.7. Homework
 
+**📌Quiz**
 
+> ​	Q: What is the following limit?
+
+$$
+L=\lim_{x\to1}\frac{x^{-7/4}-1}{x-1}
+$$
+
+> ​	Solution 1 [<u>**L'Hôpital's rule**</u>](https://en.wikipedia.org/wiki/L'H%C3%B4pital's_rule):
+
+This solution is provided by Zebin. The L'Hôpital's rule states that:
+
+ if
+$$
+\lim _{x\to c}f(x)=\lim _{x\to c}g(x)=0{\text{ or }}\pm \infty
+$$
+and
+$$
+ g'(x)\neq 0\text{, for all }x\text{ in}
+$$
+and
+$$
+\lim _{x\to c}{\frac {f'(x)}{g'(x)}}\text{ exists}
+$$
+then
+$$
+\lim _{x\to c}{\frac {f(x)}{g(x)}}=\lim _{x\to c}{\frac {f'(x)}{g'(x)}}
+$$
+
+
+Since
+$$
+\text{when }x=1,\frac{x^{-7/4}-1=0}{x-1=0}
+$$
+Therefore, we can have:
+$$
+L=\lim_{x\to1}\frac{x^{-7/4}-1}{x-1}=\lim_{x\to1}\frac{(x^{-7/4}-1)'}{(x-1)'}=-\frac{7}{4}
+$$
+
+
+> ​	Solution 2(by mit)
+
+Let $f(x)=x^{-7/4}$. Then this limit is $\lim_{x\to1}\frac{f(x)-1}{x-1}=f'(1)$. Now we compute the derivative of $f(x)$ directly rather than attempting to evaluate this limit: $f'(x)=-7/4x^{-11/4}$ , and $f'(1)=-7/4$. 
+
+
+
+
+
+
+
+
+
+# 2.Differentiation
+
+## 2.1. Linear Approximation
 
 
 
@@ -1540,4 +1699,5 @@ The number of *significant figures* is the count of those digits that carry mean
 [^1]: 一元一次方程
 
 [^2]: 管子外面的一层层包裹起来，圆形面积也会grow起来。circumference是周长的意思。
+[^3]: 洛必达法则
 
