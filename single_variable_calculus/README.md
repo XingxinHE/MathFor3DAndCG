@@ -1677,7 +1677,329 @@ Let $f(x)=x^{-7/4}$. Then this limit is $\lim_{x\to1}\frac{f(x)-1}{x-1}=f'(1)$. 
 
 ## 2.1. Linear Approximation
 
+### Summary⭐
 
+**📌Linear approximation**
+
+The linear approximation for a function $f$ near a point $x=a$ is given by the following equivalent formulas:
+$$
+\Delta f\approx\frac{df}{dx}\bigg|_{x=a}\cdot\Delta x\quad\text{for }\Delta x\text{ near 0}\\
+f(x)\approx f'(a)(x-a)+f(a)\quad\text{for }x \text{ near }a
+$$
+
+
+
+
+### Example
+
+**📌Linear Approximation Easy Example**
+
+Given a function:
+$$
+g(x)=\sqrt{x}
+$$
+What is the value of $g(104)$? Use linear approximation rather than calculator to do this.
+
+Because 104 is near 100, so we can set $a=100$.
+$$
+g'(x)=\frac{1}{2\sqrt{x}}
+$$
+Then we know the slope at $x=100$:
+$$
+g'(100)=\frac{1}{20}=0.05
+$$
+And also we know the value at $x=100$ is:
+$$
+g(100)=\sqrt{100}=10
+$$
+So we can draw the diagram:
+
+<div align="center">
+    <figure>
+    <div><img src="img/linear_approximation.svg" style="width:35%" align="center"></div>
+    </figure>
+</div>
+
+From $x=100$ to $x=104$, the difference can be "**approximated**" as the $?$ on the purple line. Imagine the $(100, 10)$ as the origin, then the height of purple line is:
+$$
+0.05\cross(104-100) = 0.2 = \Delta g(x)
+$$
+Therefore, 
+$$
+\begin{align}
+g(104) &\approx g(100)+\Delta g(104-100)\\
+&=10+0.2=10.2
+\end{align}
+$$
+
+
+
+
+## 2.2. Product Rule
+
+### Summary⭐
+
+**📌Product Rule**
+
+If
+$$
+h(x)=f(x)g(x)
+$$
+ then
+$$
+h'(x)=f(x)g'(x)+g(x)f'(x)
+$$
+at all points where the derivatives $f'(x)$ and $g'(x)$ are defined.
+
+
+
+
+
+### Example
+
+**📌Proof**
+
+For
+$$
+h(t)=f(t)g(t)
+$$
+I am gonna prove that
+$$
+h'(t)\neq f'(t)g'(t)
+$$
+
+> ​	Solution 1: by the unit
+
+Suppose that $t$ is variable measuring time in seconds $s$, and $f$ and $g$ are functions of that output distances, measured in meters $m$.
+
+The unit of $f(t), g(t)$ is:
+$$
+m
+$$
+The unit of $f'(t), g'(t)$ is:
+$$
+m/s
+$$
+The unit of $f'(t),g'(t)$ is:
+$$
+m^2/s^2
+$$
+The unit of $h(t)$ is:
+$$
+m^2
+$$
+The unit of $h'(t)$ is
+$$
+m^2/s\\
+$$
+Therefore,
+$$
+\begin{align}
+m^2/s &\neq m^2/s^2\\
+h'(t) &\neq f'(t)g'(t)
+\end{align}
+$$
+
+> ​	Solution 2: by geometry
+
+<div align="center">
+    <figure>
+    <div><img src="img/geometry_product_rule.svg" style="width:35%" align="center"></div>
+    </figure>
+</div>
+
+The $h(t)$ is the area of the rectangle and $h'(t)$ is the rate of growth of that rectangle(area in dot). Therefore, we can have:
+$$
+h'(t)=f(t)g'(t)+g(t)f'(t)
+$$
+
+
+
+
+**📌Example**
+
+Find the derivative of $j(x)=\sqrt{x}\cos{x}$.
+
+Set
+$$
+\begin{align}
+f(x)&=\sqrt{x}\\g(x)&=\cos{x}\\
+j(x)&=f'(x)g(x)+f(x)g'(x)\\
+&=\frac{1}{2\sqrt{x}}\cos{x}-\sin{x}\sqrt{x}
+\end{align}
+$$
+
+
+
+
+
+
+## 2.3. Quotient Rule
+
+### Summary⭐
+
+**📌Quotient Rule**
+
+If
+$$
+h(x)=\frac{f(x)}{g(x)} \quad \text{for all }x
+$$
+then
+$$
+h'(x)=\frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}
+$$
+at all points where $f(x)$ and $g(x)$ are differentiable and $g(x)\neq 0$.
+
+
+
+### Example
+
+**📌Proof**
+
+You can prove it using $\Delta h$.
+
+For:
+$$
+h(x) = \frac{f(x)}{g(x)}
+$$
+Have:
+$$
+\begin{align}
+h'(x)&=\lim_{\Delta x\to0}\frac{h(x+\Delta x)-h(x)}{\Delta x}\\
+&=\bigg(\frac{f(x+\Delta x)}{g(x+\Delta x)}-\frac{f(x)}{g(x)}\bigg)/\Delta x\\
+&=\bigg(\frac{ \frac{f(x+\Delta x)\cdot g(x)-f(x)\cdot g(x+\Delta x)}{\Delta x}  }{g(x+\Delta x)\cdot g(x)}\bigg)\\
+&=\text{continue..}
+\end{align}
+$$
+
+
+
+
+**📌The derivative of $\tan{}$ **
+$$
+\begin{align}
+\frac{d}{dx}(\tan{x})&=\frac{d}{dx}(\frac{\sin{x}}{\cos{x}})\\
+&=\frac{(\sin{x})'\cos{x}-\sin{x}(\cos{x})'}{(\cos x)^2}\\
+&=\frac{(\cos{x})^2+(\sin{x})^2}{(\cos{x})^2}\\
+&=\frac{1}{(\cos{x})^2}=(\sec^{x})^2
+\end{align}
+$$
+
+
+## 2.4. Chain rule
+
+### Summary⭐
+
+**📌Chain Rule**
+
+If
+$$
+h(x)=f(g(x))
+$$
+then
+$$
+\begin{align}
+h'(x)=f'(g(x))\cdot g'(x)
+\end{align}
+$$
+at all points where the derivatives $f'(g(x))$ and $g'(x)$ are defined.
+
+Alternatively, we can see this in Leibniz format. If
+$$
+y=f(u), u=g(x)
+$$
+then
+$$
+\frac{dy}{dx}\bigg|_{x=a}=\frac{dy}{du}\bigg|_{u=g(a)}\frac{du}{dx}\bigg|_{x=a}
+$$
+
+
+at any point $x=a$ where the derivatives on the right hand side are defined.
+
+
+
+
+
+### Example
+
+**📌Example of Chain Rule**
+
+Calculate the derivative of
+$$
+\frac{d}{d\theta}(\cos^2(\theta^4))
+$$
+The chain rule can much easier be solved by the Leibniz notation:
+
+
+
+Let
+$$
+y=\cos^2(\theta^4)
+$$
+Then 
+$$
+\frac{d}{d\theta}(\cos^2(\theta^4))
+$$
+can be decomposed as:
+$$
+\begin{align}
+y&=x^2\\
+x&=\cos{w}\\
+w&=\theta^4
+\end{align}
+$$
+Then we have:
+$$
+\begin{align}
+\frac{d}{d\theta}(\cos^2(\theta^4))&=\frac{dy}{dx}\cdot\frac{dx}{dw}\cdot\frac{dw}{d\theta}\\
+&=2x\cdot(-\sin{w})\cdot4\theta^3\\
+\text{plug y..x..w..}\\
+&=2\cos{\theta^4}\cdot(-\sin{\theta^4})\cdot4\theta^3
+\end{align}
+$$
+
+
+
+
+## 2.5. Implicit functions
+
+### Summary⭐
+
+**📌Definition of Implicit function**
+
+An **implicit function** is an equation involving both $x$ and $y$ (or any two variables really); you *could* solve for $y$ as a function of $x$, but often times, that computation is messy (or impossible). 
+
+
+
+**📌Definition of Explicit function**
+
+If a function is not implicit, we say that it is explicit.
+
+
+
+**📌Why do we need implicit function?**
+
+Immediately differentiating
+$$
+y=x^{m/n}
+$$
+is hard. But differentiating the *implicit* function
+$$
+y^n=x^m
+$$
+was a whole lot easier. This happens any time your function is more simply described implicitly.
+
+
+
+### Example
+
+**📌Example**
+
+//TODO - here should be an example of the geometry curve
+
+// hint-my idea-the y can be see as the composition of x function
+
+//TODO - the example of recitation
 
 <div align="center">
     <h1>
