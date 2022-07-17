@@ -1734,6 +1734,30 @@ $$
 
 
 
+**📌Exercise**
+
+Find the linear approximation of the following function near $x=0$.
+$$
+f(x)=\frac{1}{a+bx}, a\neq0
+$$
+
+> ​	Solution:
+
+We have linear approximation as follow:
+$$
+\begin{align}
+f(x)&\approx f'(a)(x-a)+f(a)\\
+&\approx f'(0)\cdot(x-0)+f(0)\\
+&\approx \frac{1'(a+bx)-1\cdot(a+bx)'}{(a+bx)^2}(x-0)+f(0)\\
+&\approx \frac{-b}{a^2}x+\frac{1}{a}
+\end{align}
+$$
+
+
+
+
+
+
 
 ## 2.2. Product Rule
 
@@ -1886,7 +1910,7 @@ $$
 $$
 
 
-## 2.4. Chain rule
+## 2.4. Chain Rule
 
 ### Summary⭐
 
@@ -1961,7 +1985,7 @@ $$
 
 
 
-## 2.5. Implicit functions
+## 2.5. Implicit Functions
 
 ### Summary⭐
 
@@ -1995,11 +2019,458 @@ was a whole lot easier. This happens any time your function is more simply descr
 
 **📌Example**
 
-//TODO - here should be an example of the geometry curve
 
-// hint-my idea-the y can be see as the composition of x function
 
-//TODO - the example of recitation
+**📌Calculate the $\frac{dy}{dx}$ from $x^2+y^2=25$**
+$$
+\begin{align}
+\frac{d}{dx}(x^2+y^2)&=\frac{d}{dx}25\\
+2x+2y\cdot y'&=0\\
+2x+2y\cdot \frac{dy}{dx}&=0\\
+2y\cdot \frac{dy}{dx}&=-2x\\
+\frac{dy}{dx}&=-\frac{x}{y}\\
+\end{align}
+$$
+We can verify this by the following diagram
+
+<div align="center">
+    <figure>
+    <div><img src="img/implicitly_differentiate_the_circle.svg" style="width:35%" align="center"></div>
+    </figure>
+</div>
+
+
+
+
+
+**📌For $x^4-3x^2+y^4+y^2+2x^2y^2=0$ function**
+
+This function is kind of pretty.
+
+
+<div align="center">
+    <figure>
+    <div><img src="img/crazy_looking_curve.svg" style="width:35%" align="center"></div>
+    </figure>
+</div>
+> ​	Q: What is its derivative?
+
+
+$$
+\begin{align}
+\frac{d}{dx}(x^4-3x^2+y^4+y^2+2x^2y^2)&=\frac{d}{dx}(0)\\
+4x^3-6x+4y^3\cdot y'+2y\cdot y'+2(2xy^2+x^22y\cdot y')&=0\\
+4x^3-6x+4y^3\cdot \frac{dy}{dx}+2y\cdot \frac{dy}{dx}+2(2xy^2+x^22y\cdot \frac{dy}{dx})&=0\\
+\frac{dy}{dx}&=\frac{-4x^3+6x-4xy^2}{4y^3+2y+4x^2y}\\
+&=-\frac{x}{y}\frac{(2x^2-3+2y^2)}{(2y^2+1+2x^2)}
+\end{align}
+$$
+
+One secret from the $y^4$ changed to $4y^3\cdot \frac{dy}{dx}$ is that $y^4$ here is actually $\frac{d}{dx}y^4$. Therefore, you can see $y$ is composed by $x$ and therefore you can use **Chain Rule**!!
+
+
+
+
+
+> ​	Q: What is the slope of the tangent line at $(x,y)=(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})$
+
+$$
+\frac{dy}{dx}\bigg|_{(x,y)=(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})}=-\frac{x}{y}\frac{(2x^2-3+2y^2)}{(2y^2+1+2x^2)}=\frac{1}{3}
+$$
+
+
+
+> ​	Q: Which points have horizontal tangent line?
+
+If the tangent line is horizontal, the derivative is equal zero.
+$$
+\frac{dy}{dx}=-\frac{x}{y}\frac{(2x^2-3+2y^2)}{(2y^2+1+2x^2)}=0
+$$
+Look at the point $(0,0)$ in the above graph, we know that if $x=0$, $y$ must $=0$ at that point. While $y$ CAN'T be zero in the preceding equation. Therefore, we know that
+$$
+\begin{align}
+2x^2-3+2y^2&=0\\
+x^2+y^2&=\frac{3}{2}
+\end{align}
+$$
+We can do some crazy algebra to get the results are $x=\pm\sqrt{15}, y=\pm\frac{3}{4}$. But actually this can be illustrated as followed:
+
+<div align="center">
+    <figure>
+    <div><img src="img/beautiful_derivative.svg" style="width:25%" align="center"></div>
+    </figure>
+</div>
+
+
+
+
+
+
+
+## 2.6. Inverse Functions
+
+### Summary⭐
+
+📌**Definition of inverse function**
+
+If functions $f$ and $g$ satisfy
+$$
+\begin{align}
+g(f(x))&=x\\
+f(g(y))&=y
+\end{align}
+$$
+then we say $g$ is the **inverse** of $f$, and denote it by
+$$
+f^{-1}
+$$
+If a function $f$ has an inverse function $f^{-1}$, then
+$$
+f^{-1}(b)=a\space\text{ if and only if }\space f(a)=b
+$$
+
+
+
+
+📌**Definition of one-to-one**
+
+A function $f$ is **one-to-one** if
+$$
+f(a)\neq f(b)
+$$
+whenever
+$$
+a\neq b
+$$
+It is one-to-one <u>if and only if</u> its graph satisfies the horizontal line test (no horizontal line intersects its graph at more than one place).
+
+//TODO horizontal line test diagram here..
+
+
+
+📌**Domain and range, interval notation**
+
+Recall that the **domain** of a function $f$ is the set of allowable input values. For instance, the domain of the function $f(x)=1/x$ is the set of all non-zero real numbers.
+
+The **range** of $f$ is the set of all possible output values. For instance, the range of the function $g(x)=x^2$ is the set of all real numbers that are non-negative.
+
+We often use interval notation to express sets of numbers like domains and ranges. A **closed interval**, denoted $[a,b]$, is the set of numbers $x$ such that $a\leq x\leq b$.
+
+An **open interval**, denoted $(a,b)$, is the set of numbers $x$ such that $a<x<b$.
+
+One can have a half-open, half-closed interval. For instance, $[-1,3)$ is the set of numbers $x$ such that $-1\leq x<3$. One can also use $\pm\infin$ as endpoints: $(-\infin,0)$is the set of numbers $x$ such that $-\infin<x<0$ (the set of negative numbers, in other words).
+
+This notation using round parentheses for open intervals is not universal; many mathematicians use reversed square brackets instead. For instance, they would denote the interval $3<x<7$ as $]3,7[$ rather than $(3,7)$. In this course, however, we will stick to round parentheses for open intervals.
+
+
+
+📌**The inverse trig functions**
+$$
+\begin{align}
+\arcsin{x}= \quad&\theta\text{ in }[-\pi/2,\pi/2]\quad\quad &s.t.\space\sin{\theta}=x\\
+\arccos{x}= \quad&\theta\text{ in }[0,\pi]\quad\quad &s.t.\space\cos{\theta}=x\\
+\arctan{x}= \quad&\theta\text{ in }(-\pi/2,\pi/2)\quad\quad &s.t.\space\tan{\theta}=x\\
+\end{align}
+$$
+
+
+📌**Derivatives of inverse functions**
+
+If $g$ is a (full or partial) inverse of a function $f$, then
+$$
+g'(x)=\frac{1}{f'(g(x))}
+$$
+at all $x$ where $f'(g(x))$ exists and is non-zero.
+
+
+
+📌**Derivatives of arctrig functions**
+$$
+\begin{align}
+\frac{d}{dx}\arcsin(x)&=\frac{1}{\sqrt{1-x^2}}\\
+\frac{d}{dx}\arccos(x)&=\frac{-1}{\sqrt{1-x^2}}\\
+\frac{d}{dx}\arctan(x)&=\frac{1}{1+x^2}\\
+\end{align}
+$$
+
+
+
+
+### Example
+
+📌Inverse function proof
+
+
+
+
+
+## 2.7. Exponential Functions
+
+### Summary⭐
+
+📌**Properties of exponents**
+
+Let $a$ be a positive real number and we have:
+$$
+\begin{align}
+a^0&=1\\
+a^1&=a\\
+a^ma^n&=a^{m+n}\\
+(a^m)^n&=a^{mn}\\
+a^{m/n}&=\sqrt[n]{a^m}\\
+\end{align}
+$$
+📌**Properties of exponential functions**
+
+The function
+$$
+f(x)=a^x
+$$
+has base $a$ for a positive real number $a$.
+
+- The function $a^x$ is a continuous function.
+- The domain $a^x$ of is all real numbers.
+- The range $a^x$ of is all positive real numbers.
+
+
+
+📌**The derivative of an exponential function**
+
+The derivative of the exponential function is
+$$
+\frac{d}{dx}a^x=M(a)a^x
+$$
+where the mystery number $M(a)$ is the slope of the tangent line at zero:
+$$
+M(a)=\frac{d}{dx}a^x\bigg|_{x=0}=\lim_{\Delta x\to0}\frac{a^{\Delta x}-1}{\Delta x}
+$$
+
+
+📌**Definition of $e$**
+
+The base $e$ is the unique real number so that
+$$
+M(e)=\frac{d}{dx}e^x\bigg|_{x=0}=1
+$$
+Then
+$$
+\frac{d}{dx}e^x=e^x
+$$
+
+
+
+
+### Example
+
+📌mystery number M(a), the proof is interesting
+
+
+
+
+
+**📌If $r(x)=e^{x+5}$, prove $r'(x)=r(x)$**
+
+Prove it by chain rule:
+$$
+\text{Let }u=x+5,\text{ then we have}\\
+r'(x)=(e^u)'=e^u\cdot u'=e^{x+5}\cdot\frac{d}{dx}(x+5)=e^{x+5}\cdot1=e^{x+5}
+$$
+Prove it by algebra:
+$$
+r(x) \text{ can be written as }r(x)=e^5e^x,\text{ since }e^5 \text{ is constant, therefore } r'(x)=e^5e^x
+$$
+
+
+
+
+## 2.8. Logarithms
+
+### Summary⭐
+
+📌**Properties of logarithms** 
+
+- logarithms and exponential are inverse function such that, $\log_{a}(y)=x$ is actually $a^x = y$
+- $\log_{10}(x)$ is the inverse function of $10^x$
+- nature log denoted $\ln(x)$, is the inverse function of $e^x$
+- $\ln e^x=x$
+- $e^{\ln x}=x$
+- $\ln(ab)=\ln(a)+\ln(b)$
+- $\ln(a^b)=b\ln{a}$
+
+
+
+### Example
+
+**📌Proof Differentiating the logarithm**
+
+With logarithm properties, we are known that:
+$$
+\begin{align}
+e^{\ln{x}}&=x, \text{we set }(u=\ln{x})\text{ and therefore we have}\\
+e^u&=x,\text{ and we can differentiate it.}\\
+e^u&=x\\
+\frac{d}{dx}(e^u)&=\frac{d}{dx}(x)\\
+\frac{d}{dx}(e^u)&=1\\
+e^uu'&=1\\
+e^u\frac{du}{dx}&=1\\
+x\frac{du}{dx}&=1\\
+x\frac{d(\ln x)}{dx}&=1\\
+\frac{d}{dx}\ln x&=1/x\\
+\end{align}
+$$
+Therefore, we have the derivative of $\ln x$ function:
+$$
+\frac{d}{dx}\ln x=\frac{1}{x}
+$$
+
+
+**📌Find the derivative of $g(t)=\log_{10}t$**
+
+//todo hint: inverse function
+
+
+
+
+
+# -------------------------------
+
+
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+
 
 <div align="center">
     <h1>
