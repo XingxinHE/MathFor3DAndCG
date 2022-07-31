@@ -1675,7 +1675,7 @@ Let $f(x)=x^{-7/4}$. Then this limit is $\lim_{x\to1}\frac{f(x)-1}{x-1}=f'(1)$. 
 
 # 2.Differentiation
 
-## 2.1. Linear Approximation
+## 2.0. Linear Approximation
 
 ### Summary⭐
 
@@ -1759,7 +1759,7 @@ $$
 
 
 
-## 2.2. Product Rule
+## 2.1. Product Rule
 
 ### Summary⭐
 
@@ -1858,7 +1858,7 @@ $$
 
 
 
-## 2.3. Quotient Rule
+## 2.2. Quotient Rule
 
 ### Summary⭐
 
@@ -1910,7 +1910,7 @@ $$
 $$
 
 
-## 2.4. Chain Rule
+## 2.3. Chain Rule
 
 ### Summary⭐
 
@@ -1985,7 +1985,7 @@ $$
 
 
 
-## 2.5. Implicit Functions
+## 2.4. Implicit Functions
 
 ### Summary⭐
 
@@ -2107,7 +2107,7 @@ We can do some crazy algebra to get the results are $x=\pm\sqrt{15}, y=\pm\frac{
 
 
 
-## 2.6. Inverse Functions
+## 2.5. Inverse Functions
 
 ### Summary⭐
 
@@ -2204,7 +2204,7 @@ $$
 
 
 
-## 2.7. Exponential Functions
+## 2.6. Exponential Functions
 
 ### Summary⭐
 
@@ -2283,7 +2283,7 @@ $$
 
 
 
-## 2.8. Logarithms
+## 2.7. Logarithms
 
 ### Summary⭐
 
@@ -2332,27 +2332,121 @@ $$
 
 
 
+# Homework
+
+**📌Write the following limit as a derivative and evaluate**
+$$
+\lim_{x\to\frac{\pi}{4}}\frac{\tan{(x)}-1}{x-\frac{\pi}{4}}
+$$
+The solution can be:
+$$
+\begin{align}
+\lim_{x\to\frac{\pi}{4}}\frac{\tan{(x)}-1}{x-\frac{\pi}{4}} &= f'(\frac{\pi}{4})\\
+&=\sec^2{\frac{\pi}{4}}\\
+&=\bigg(\frac{2}{\sqrt{2}}\bigg)^2=2
+\end{align}
+$$
+
+
+
+
+
+# 3.Approximations
+
+## 3.1.Linear approximation: measurement error
+
+### Summary⭐
+
+**📌Linear approximations revisited**
+
+Linear approximations is <u>**the main tool for finding the derivatives of all of the basic functions**</u> in the previous unit. Finding approximations can be really useful <u>in science and engineering</u>. It is also important to know how to measure error perpetuates through a system, and understand the system's sensitivity to small perturbations.
+
+
+
+**📌Linear Approximations near $x=0$ **
+
+Recall that the linear approximation of a function 
+$$
+f(x)
+$$
+for near
+$$
+x=0
+$$
+is given by the formula:
+$$
+f(x)\approx f(0)+f'(0)x
+$$
+Linear approximations of all of the basic functions near $x=0$ **will be used a lot**! So you may even want to <u>**memorize**</u> them.
+
+
+
+**📌Linearization**
+
+We call the linear approximation the as **linearization** of a function.
+
+
+
+**📌Approximations (likely nonlinear) of compositions**
+
+Suppose that $g(x)$ is a function such that $g(0)=0$. To find an approximation of a function
+$$
+f(g(x))
+$$
+near
+$$
+x=0
+$$
+we can take a linear approximation for $f(u)$ and then substitute $g(x)$ in for $u$. The resulting approximation is likely nonlinear, but it is still an approximation!
+$$
+f(u)\approx f(0)+f'(0)u\quad\quad\Longrightarrow\quad\quad f(g(x))\approx f(g(0))+f'(g(0))g(x)
+$$
+
+
+> ​	Warning: this only works if $g(0)=0$
+
+
+
+**📌Linear approximations of products**
+
+To find the linear approximation of a function $h(x)=f(x)g(x)$ near $x=0$, it suffices to find a linear approximation for $f(x)$, find a linear approximation for $g(x)$, and then the linear approximation for $h(x)$ is the <u>**product**</u> of these two approximations where we <u>cancel all of the terms that are quadratic</u> (or higher for more products).
+$$
+\begin{align}
+h(x)&=f(x)g(x)\\
+f(x)&=f(0)+f'(0)x\\
+g(x)&=g(0)+g'(0)x\\
+h(x)&=\text{the approximation of }f(x)\cdot\text{the approximation of }g(x)\\
+&=(f(0)+f'(0)x)\quad\cdot\quad g(0)+g'(0)x
+\end{align}
+$$
+
+
+
+
+### Example
+
+**📌What is the linear approximation to $\ln{\sqrt{1+x^2}}$ near $x=0$?**
+
+We start by replacing $x^2$ by $u$ . The inner argument becomes $(1+u)^{1/2}\approx u/2$. Then . Replacing $u$ by $x^2$ , we get an approximation $\ln{(\sqrt{1+x^2})}\approx x^2/2$.
+
+
+
+
+
+### Summary⭐
+
+### Example
+
+
+
+### Summary⭐
+
+### Example
+
+
+
 # -------------------------------
 
-
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
 
 
 
