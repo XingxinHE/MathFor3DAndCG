@@ -2403,7 +2403,7 @@ f(u)\approx f(0)+f'(0)u\quad\quad\Longrightarrow\quad\quad f(g(x))\approx f(g(0)
 $$
 
 
-> ​	Warning: this only works if $g(0)=0$
+> ​	Warning⚠: this only works if $g(0)=0$
 
 
 
@@ -2431,17 +2431,367 @@ We start by replacing $x^2$ by $u$ . The inner argument becomes $(1+u)^{1/2}\app
 
 
 
+📌**Example of Approximations of compositions**
 
+> ​	1️⃣What is the linear approximation of $e^{-x}$ near $x=0$?
+
+$$
+\begin{align}
+\text{Let }u&=-x\\
+e^{-x}&=e^u\\
+\text{from the cheat sheet, we have}\\
+&=1+u\\
+&=1-x
+\end{align}
+$$
+
+
+
+> ​	2️⃣What is the linear approximation of $(1+3x)^{-1/2}$ near $x=0$?
+
+$$
+\begin{align}
+\text{Let }u&=3x\\
+(1+3x)^{-1/2}&=(1+u)^{-1/2}\\
+\text{from the cheat sheet, we have}\\
+&=1+(-\frac{1}{2}u)\\
+&=1-\frac{3}{2}x
+\end{align}
+$$
+
+
+
+
+> ​	3️⃣What is the linear approximation of $e^{x^{3}}$ near $x=0$?
+
+$$
+\begin{align}
+\text{Let }u&=x^3\\
+e^{x^{3}}&=e^u\\
+\text{from the cheat sheet, we have}\\
+&\approx1+u\\
+&\approx1+x^3
+\end{align}
+$$
+
+
+
+
+> ​	4️⃣What is the linear approximation of $\ln{\sqrt{1+x^2}}$ near $x=0$?
+
+$$
+\begin{align}
+\text{Let }u&=x^2\\
+\sqrt{1+u}=(1+u)^{\frac{1}{2}}&\approx\\
+\text{from the cheat sheet, we have}\\
+&\approx1+\frac{1}{2}u\\
+\text{then}\\
+\ln{\sqrt{1+x^2}}&=\ln{\sqrt{1+u}}\\&\approx\ln{(1+u/2)}\\
+\text{from the cheat sheet, we have}\\
+&\approx u/2\\
+\text{replug } u=x^2, \text{we have }\ln{\sqrt{1+x^2}}\approx x^2/2
+\end{align}
+$$
+
+
+
+
+
+
+
+📌**Example of Approximations of products**
+
+> ​	1️⃣What is the linear approximation of $\frac{e^{-3x}}{\sqrt{1+x}}$?
+
+There is a simpler way of doing this:
+$$
+\frac{e^{-3x}}{\sqrt{1+x}}=e^{-3x}(1+x)^{\frac{1}{2}}
+$$
+The linear approximation of $e^{-3x}$ is
+$$
+\text{Let }u=-3x,\quad e^{-3x}=e^u\quad\approx\quad1+u\quad=\quad1-3x
+$$
+The linear approximation of $(1+x)^{\frac{1}{2}}$ is
+$$
+(1+x)^{\frac{1}{2}}\approx 1-\frac{1}{2}x
+$$
+Therefore, we have
+$$
+\begin{align}
+\frac{e^{-3x}}{\sqrt{1+x}}=e^{-3x}(1+x)^{\frac{1}{2}}&\approx (1-3x)(1-\frac{1}{2}x)\\
+&=1-\frac{1}{2}x-3x+\frac{3}{2}x^2\\
+\text{Since we are calculating "linear" approximation(which is a line), therefore }\\
+&=1-\frac{1}{2}x-3x+\cancel{\frac{3}{2}x^2}\\
+&\approx1-\frac{7}{2}x
+\end{align}
+$$
+
+
+> ​	2️⃣What is the linear approximation of $\frac{\ln{(1-x)}}{(1+x)^2}$?
+
+We have
+$$
+\begin{align}
+(1+x)^{-2}&\approx1-2x\\
+\ln{(1-x)}&\approx(-x)\\
+(1+x)^{-2}\ln{(1-x)}&\approx(1-2x)(-x)\approx-x+2x^2\approx-x+\cancel{2x^2}
+\end{align}
+$$
+**📌Example of Calculating Errors**
+
+The following is a diagram of calculating the Green Building.
+
+<div align="center">
+    <figure>
+    <div><img src="img/images_greenbld_diagram.svg" style="width:25%" align="center"></div>
+    </figure>
+</div>
+
+The height $y$ of the Green building is given by
+$$
+y = h+x\tan{(\theta)}
+$$
+The following is the error table
+
+| Quantity                   | Variable | Measurement | Error           |
+| -------------------------- | -------- | ----------- | --------------- |
+| Height to Jen's eyeball    | $h$      | 4.9 feet    | $\pm$.01 feet   |
+| Distance to Green Building | x        | 175 feet    | $\pm$ 3 feet    |
+| Angle                      | $\theta$ | 57 degrees  | $\pm$ 3 degrees |
+
+The following is a diagram of error from the measurements.
+
+<div align="center">
+    <figure>
+    <div><img src="img/images_greenbld_diagram2.svg" style="width:35%" align="center"></div>
+    </figure>
+</div>
+
+We have the relation in geometry:
+$$
+\begin{align}
+\tan{(\theta+\Delta\theta)}&=\frac{(y+\Delta y)-(h+\Delta h)}{x+\Delta x}\\
+&=\frac{y-\Delta h+(\Delta y-h)}{x+\Delta x}\\
+&=\frac{y-\Delta h+x\tan{x}}{x+\Delta x}\\
+\end{align}
+$$
+And therefore the error is that:
+$$
+\begin{align}
+\Delta y&=\Delta h+(x+\Delta x)(\tan{(\theta+\Delta\theta)})-x\tan{(\theta)}\\\\
+\text{The linear approximation equation is }f(x)&\approx f(a)+f'(a)(x-a)\\
+\text{If we see }f(x)\text{ as }\tan{(x)}\text{, therefore we have }\space a&=\theta,\quad x-a=\Delta\theta\\
+f(x)&=\tan{(x)}\\
+f'(x)&=\sec^2{(x)}\\
+\text{Hence, we have the linear approximation of }\tan{(\theta+\Delta\theta)}&\text{ as }f(\theta)+f'(\theta)(\Delta\theta)\\\\
+\Delta y&=\Delta h+(x+\Delta x)(\tan{(\theta+\Delta\theta)})-x\tan{(\theta)}\\
+&\approx\Delta h+(x+\Delta x)(\tan{(\theta)+\sec^2{(\theta)}\cdot\Delta\theta})-x\tan{(\theta)}\\
+&\approx\Delta h+ x\tan{(\theta)}+x\sec^2{(\theta)}\Delta\theta+\Delta x\tan{(\theta)}+\sec^2{(\theta)}\Delta\theta\Delta x  -x\tan{(\theta)}\\
+&\approx\Delta h+ \cancel{x\tan{(\theta)}} +x\sec^2{(\theta)}\Delta\theta+\Delta x\tan{(\theta)}+\sec^2{(\theta)}\Delta\theta\Delta x  \cancel{-x\tan{(\theta)}}\\
+&\approx\Delta h+x\sec^2{(\theta)}\Delta\theta+\Delta x\tan{(\theta)}+\cancel{\sec^2{(\theta)}\Delta\theta\Delta x}\quad\text{(cancel out multiple term)} \\
+\end{align}
+$$
+
+
+
+So what is <u>the greatest contribution to the error</u>?
+
+- [ ] $\Delta h$
+- [x] $x\sec^2{(\theta)}\Delta\theta$
+- [ ] $\Delta x\tan{(\theta)}$
+
+Why is that? The error can be seen as the following.
+
+| Quantity                   | Variable | Measurement | Error           |
+| -------------------------- | -------- | ----------- | --------------- |
+| Height to Jen's eyeball    | $h$      | 4.9 feet    | $\pm$.01 feet   |
+| Distance to Green Building | x        | 175 feet    | $\pm$ 3 feet    |
+| Angle                      | $\theta$ | 57 degrees  | $\pm$ 3 degrees |
+
+The error of $h$ is $\Delta h$ is fairly small as $\pm.01$. So the comparison falls between $x\sec^2{(\theta)}\Delta\theta$ and $\Delta x\tan{(\theta)}$. Let's see the graph. 
+
+<div align="center">
+    <figure>
+    <div><img src="img/GreenBuildingGrapha.svg" style="width:35%" align="center"></div>
+    </figure>
+</div>
+
+$\theta$ is 57 degree and the value  $x\sec^2{(\theta)}\Delta\theta$ > $\Delta x\tan{(\theta)}$. Therefore, the greatest contribution is $x\sec^2{(\theta)}\Delta\theta$. The final error is that
+$$
+\begin{align}
+\Delta y &\approx\Delta h+x\sec^2{(\theta)}\Delta\theta+\Delta x\tan{(\theta)}\\
+&\approx0.01+175(3\pi/180)\sec^2{(19\pi/60)}+3\tan{(19\pi/60)}\approx 35
+\end{align}
+$$
+
+
+
+
+
+
+
+
+## 3.2.Quadratic approximation
 
 ### Summary⭐
+
+**📌Quadratic Approximation**
+
+The quadratic approximation near $x=a$ is the best fit parabola to $f$ at the point $x=a$.
+
+The formula for the quadratic approximation of a function $f$ near a point $x=a$ is
+$$
+f(x)\approx f(a)+f'(a)(x-a)+\frac{f''(a)}{2}(x-a)^2
+$$
+When $a=0$, this quadratic approximation becomes
+$$
+f(x)\approx f(0)+f'(0)(x)+\frac{f''(0)}{2}(x)^2
+$$
+
+
+**📌Big-O notation**
+
+A function $f(x)$ is on the order $x^n$ near $x=0$, which is denoted using big “O" notation as $f(x)=O(x^n)$ near $x=0$, if $\abs{f(x)}\leq kx^n$.
+
+
+
+### Example
+
+**📌Find the quadratic approximation to $\frac{\sec{x}}{\sqrt{1-x^2}}$, for $x\approx0$**
+
+//TODO what???
+$$
+\begin{align}
+\frac{\sec{x}}{\sqrt{1-x^2}}&=\frac{1}{\cos{x}\sqrt{1-x^2}}\\
+&\approx\frac{1}{(1-\frac{1}{2}x^2)(1-\frac{1}{2}x^2)}\\
+&\approx\frac{1}{1-x^2}\approx1+x^2
+\end{align}
+$$
+
+
+
+
+## 3.3.Newton's Method
+
+### Summary⭐
+
+**📌Newton's Method**
+
+Given a function $f(x)$, find $x$ such that $f(x)=0$.
+
+1. Make a good guess $x_0$
+2. Call $x_1$ the intercept of the tangent line through $(x_0,f(x_0))$. It has the formula
+
+$$
+x_1=x_0-\frac{f(x_0)}{f'(x_0)}
+$$
+
+3. Repeat. The general form is
+
+$$
+x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}
+$$
+
+
+
+
 
 ### Example
 
 
 
-### Summary⭐
+# 😏------Cheat Sheet------📃
 
-### Example
+**📌Derivative of basic functions**
+
+
+
+
+
+**📌Linear approximations of basic functions**
+
+> ​	$(1+x)^r$ near $x=0$
+
+$$
+1+rx
+$$
+
+
+
+> ​	$\sin{(x)}$ near $x=0$
+
+$$
+x
+$$
+
+> ​	$\cos{(x)}$ near $x=0$
+
+$$
+1
+$$
+
+
+
+> ​	$e^x$ near $x=0$
+
+$$
+1+x
+$$
+
+
+
+> ​	$\ln{(1+x)}$ near $x=0$
+
+$$
+x
+$$
+
+
+
+**📌Quadratic approximation of basic functions**
+
+
+> ​	$(1+x)^r$ near $x=0$
+
+$$
+1+rx+\frac{r(r-1)}{2}x^2+O(x^3)
+$$
+
+
+
+> ​	$\sin{(x)}$ near $x=0$
+
+$$
+x+O(x^3)
+$$
+
+> ​	$\cos{(x)}$ near $x=0$
+
+$$
+1-\frac{x^2}{2}+O(x^3)
+$$
+
+
+
+> ​	$e^x$ near $x=0$
+
+$$
+1+x+\frac{x^2}{2}+O(x^3)
+$$
+
+
+
+> ​	$\ln{(1+x)}$ near $x=0$
+
+$$
+x-\frac{x^2}{2}+O(x^3)
+$$
+
+
+
+
+
+
 
 
 
