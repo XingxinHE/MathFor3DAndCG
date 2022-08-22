@@ -2651,11 +2651,108 @@ $$
 
 **📌Big-O notation**
 
-A function $f(x)$ is on the order $x^n$ near $x=0$, which is denoted using big “O" notation as $f(x)=O(x^n)$ near $x=0$, if $\abs{f(x)}\leq kx^n$.
+A function $f(x)$ is on the order $x^n$ near $x=0$, which is denoted using big “O" notation as $f(x)=O(x^n)$ near $x=0$, if $\abs{f(x)}\leq kx^n$ for some constant $k$.
 
 
 
 ### Example
+
+**📌Quadratically Approximate $\tan{(46\degree)}$**
+
+Taking from the preceding equation, we know that
+
+- $x$ is $46\degree$
+- $a$ is $45\degree$
+
+Therefore we can have
+$$
+\begin{align}
+f(45\degree)\approx\tan{(\frac{\pi}{4}+\frac{\pi}{180})}&\approx\tan{(\frac{\pi}{4})}+\sec^2{(\frac{\pi}{4})}\frac{\pi}{180}+\tan{(\frac{\pi}{4})}\sec^2{(\frac{\pi}{4})}\bigg(\frac{\pi}{180}\bigg)^2\\
+&\approx1+2\frac{\pi}{180}+2\frac{\pi^2}{180^2}\\
+&\approx1.036
+\end{align}
+$$
+
+
+**📌Proof**
+
+Let
+$$
+Q(f):=f(0)+f'(0)x+\frac{f''(0)}{2}x^2\\
+Q(g):=g(0)+g'(0)x+\frac{g''(0)}{2}x^2
+$$
+Show
+$$
+Q(fg)=Q(Q(f)\cdot Q(g))
+$$
+Proof - Actually this is a complicate but intermediate hard proof... I am a bit lazy here...
+
+Example
+$$
+\begin{align}
+f(x)&=e^x\\
+g(x)&=\sin{x}\\
+Q(f)&=1+x+\frac{x^2}{2}\\
+Q(g)&=x\\
+Q(fg)=Q(Q(f)\cdot Q(g))&\approx(1+x+\frac{x^2}{2})(x)\\
+&\approx x+x^2+\frac{x^3}{2}\\
+&\text{Since we are doing quadratic approximation, therefore}\\
+&\approx x+x^2+\cancel{\frac{x^3}{2}}\\
+\end{align}
+$$
+
+
+**📌Example - Taking advantage from the "chain rule" of quadratic approximation**
+$$
+\begin{align}
+f(x)&=e^{x+x^2}\text{ , near }x=0\\
+f(x)&=e^x\cdot e^{x^2}\\
+&\approx Q(e^x)\cdot Q(e^{x^2})\\
+&\text{and this is much easier.}\\
+&\approx (1+x+\frac{x^2}{2})(1+x^2)\\
+&\text{dropping the term over 2...}\\&
+\approx 1+x+\frac{3x^2}{2}
+\end{align}
+$$
+
+
+**📌Explanation of "error"**
+
+For function $f(x)=(1+x)^5\text{ ,near }x = 0$.
+$$
+\begin{align}
+f(x)&\approx1+5x&\quad\text{linear}\\
+f(x)&\approx1+5x+10x^2&\quad\text{quadratic}\\
+\end{align}
+$$
+The preceding is approximation. But if we replace the $\approx$ to $=$, that means
+$$
+\begin{align}
+f(x)&=1+5x+\text{error}&\quad\text{linear}\\
+f(x)&=1+5x+10x^2+\text{error}&\quad\text{quadratic}\\
+\end{align}
+$$
+
+> ​	For linear approximation, we are gonna prove that $\abs{\text{error}}\leq 12x^2$
+
+If we expand the function,
+$$
+\begin{align}
+(1+x)^5&=1+5x+\text{error}\\
+(1+x)^5&=1+5x+10x^2+10x^3+5x^4+x^5\\
+\text{error}&=10x^2+10x^3+5x^4+x^5\\
+&\text{suppose we are doing .1 precesion (it is big enough already)}\\
+10x^3=10(0.1\cross0.1\cross0.1)&=0.1\cross0.1=x^2\\
+&=10x^2+10x^3+5x^4+x^5\leq\cancelto{11x^2}{10x^2+10x^3}+5x^4+x^5\leq\cancelto{12x^2}{11x^2+5x^4+x^5}
+\end{align}
+$$
+So we defined this as
+$$
+\text{error }=O(x^2)\text{ near } x=0 \space\text{ order of magnitude}
+$$
+
+
+
 
 **📌Find the quadratic approximation to $\frac{\sec{x}}{\sqrt{1-x^2}}$, for $x\approx0$**
 
