@@ -10,106 +10,6 @@
 
 ## 0.0. Introduction to limits
 
-### Summary⭐
-
-📌**Definition of right-hand and left-hand limits**
-
-![See text below.](img/images_u0lim1_leftright.svg)
-
-> ​	📍<u>Right-hand limit</u>
-
-Suppose $f(x)$ gets really close to $R$ for values of $x$ that get really close to (*but are not equal to*) $a$ **from the right**. Then we say $R$ is the **right-hand limit** of the function $f(x)$ as $x$ approaches $a$ from the right.
-
-We write:
-$$
-f(x)\to R \space \text{as}\space x\to a^+\\
-\text{or}\\
-\lim_{x\to a^+}f(x)=R
-$$
-
-> ​	📍<u>Left-hand limit</u>
-
-Suppose $f(x)$ gets really close to $L$ for values of $x$ that get really close to (*but are not equal to*) $a$ **from the left**. Then we say $L$ is the **left-hand limit** of the function $f(x)$ as $x$ approaches $a$ from the left.
-
-We write:
-$$
-f(x)\to L \space \text{as} \space x\to a^-\\
-\text{or}\\
-\lim_{x\to a^-}f(x)=L
-$$
-
-
-📌**Possible limit behaviors**
-
-| Index | Right-hand limit | Left-hand limit | R & L                                        | Example                                                      | Image                                                        |
-| ----- | ---------------- | --------------- | -------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1️⃣     | exist✔           | exist✔          | $=$✔exist and equal                          | $f(x)=x^2$<br>looks at $x=0$                                 | <img src="img/image-20220203104207473.png" alt="image-20220203104207473"  /> |
-| 2️⃣     | exist✔           | exist✔          | $\neq$❌exist but not equal                   | $f(x) = \frac{\sqrt{(3-5x+x^3+x^2)}}{(x-1)}$<br>looks at $x=1$ | <img src="img/image-20220203110211830.png" alt="image-20220203110211830"  /> |
-| 3️⃣     | not exist❌       | not exist❌      | ❌$L$&$R$ both blows up to $\pm\infin$        | $f(x)=\frac{1}{x}$<br>looks at $x=0$                         | <img src="img/image-20220203104105031.png" alt="image-20220203104105031"  /> |
-| 4️⃣     | not exist❌       | not exist❌      | ❌oscillates and never settle down to a value | $f(x)=\sin(13/x)$<br>looks at $x=0$                          | ![image-20220203113840991](img/image-20220203113840991.png)  |
-
-
-
-
-
-📌**Limit Definition⭐**
-
-> ​	📍<u>The Limit in Words</u>
-
-If a function $f(x)$ <u>**approaches**</u> some value $L$ as $x$ approaches $a$ from <u>**both**</u> *the right and the left*, then the limit of $f(x)$ exists and equals $L$.
-
-
-
-> ​	📍<u>The Limit in Symbols</u>
-
-If
-$$
-\lim_{x\to a^+}f(x)=\lim_{x\to a^-}f(x)=L
-$$
-then
-$$
-\lim_{x\to a}f(x)=L
-$$
-Alternatively,
-$$
-f(x)\to L \quad \text{as} \quad x\to a
-$$
-Remember that $x$ is <u>approaching</u> $a$ but does **not equal** $a$.
-
-
-
-📌**The Limit Laws**
-
-Suppose:
-$$
-\lim_{x\to a}f(x)=L,\quad \lim_{x\to a}g(x)=M
-$$
-Then we get the following Limit Laws:
-
-> ​	📍Limit Law for Addition
-
-$$
-\lim_{x\to a}[f(x)+g(x)]=L+M
-$$
-
-> ​	📍Limit Law for Subtraction
-
-$$
-\lim_{x\to a}[f(x)-g(x)]=L-M
-$$
-
-> ​	📍Limit Law for Multiplication
-
-$$
-\lim_{x\to a}[f(x)\cdot g(x)]=L\cdot M
-$$
-
-> ​	📍Limit Law for Division(part 1)
-
-$$
-\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}
-$$
-
 ### Example
 
 📌**Example: $L\neq R$**
@@ -221,71 +121,6 @@ $$
 
 ### Summary⭐
 
-📌**Definition of *continuity* at a point**
-
-We say that a function $f$ is **continuous at a point** $x=a$ if
-$$
-\lim_{x\to a}f(x) = f(a)
-$$
-In particular, if either $f(a)$ or $\lim_{x\to a}f(x)$ fails to exist, then $f$ is discontinuous at $a$.
-
-
-
-We say that a function is **right-continuous at a point** $x=a$ if $\lim_{x\to a^+}f(x) = f(a)$
-
-We say that a function is **left-continuous at a point** $x=a$ if $\lim_{x\to a^-}f(x) = f(a)$
-
-
-
-📌**Types of Discontinuities**
-
-> ​	📍Jump Discontinuity
-
-If the left-hand limit $\lim_{x\to a^-}$ and the right-hand limit $\lim_{x\to a^+}$ both exist at a point $x=a$, but they are not equal, then we say that $f$ has a **jump discontinuity** at $x=a$.
-
-![img](img/images_u0lim2_jump.svg)
-
-> ​	📍Removable Discontinuity
-
-If the overall limit $\lim_{x\to a}f(x)$ exists (i.e., the left- and right-hand limits agree), but the overall limit does not equal $f(a)$, then we say that $f$ has a **removable discontinuity** at $x=a$.
-
-![img](img/images_u0lim2_removable.svg)
-
-
-
-📌**Definition of continuous function**
-
-A function $f(x)$ is continuous if for every point $c$ in the domain of $f(x)$ , the function $f$ is continuous at the point $x=c$.
-
-
-
-📌**Basic Continuous Functions**
-
-> ​	The following functions are continuous at ***all real numbers***:
-
-- all polynomials
-- $\sqrt[3]{x}$
-- $\abs{x}$
-- $\cos x$ and $\sin x$
-- exponential function $a^x$ with base $a>0$
-
-> ​	The following functions are continuous ***at the specified values*** of $x$:
-
-- $\sqrt{x}$, for $x>0$
-- $\tan x$, at all $x$ where it is defined
-- logarithmic functions $\log_{a}x$ with base $a>0$, for $x>0$
-
-
-
-📌**Limit laws and continuity**
-
-If the function $f$ and $g$ are continuous everywhere, then:
-
-- $f+g$ is continuous everywhere
-- $f-g$ is continuous everywhere
-- $f\cdot g$ is continuous everywhere
-- $f\circ g$ is continuous everywhere,  ($\circ$ means compose, e.g. $f(g(x))$)
-- $\frac{f}{g}$ is continuous where it is defined.
 
 
 
@@ -298,19 +133,6 @@ if $f$ is a function which is continuous on the interval $[a,b]$ and $M$ lies be
 <img src="img/image-20220203130246703.png" alt="image-20220203130246703" style="zoom:67%;" />
 
 ### Example
-
-📌**Example: Graph with Continuity**
-
-![img](img/images_u0lim2_continuitytest2.svg)
-
-| At     | Left-continuous | Right-continuous | Continuous | Removable Discontinuity | Jump Discontinuity |
-| ------ | --------------- | ---------------- | ---------- | ----------------------- | ------------------ |
-| $x=-2$ | ❌               | ❌                | ❌          | ⭕                       |                    |
-| $x=-1$ | ✔               | ✔                | ✔          |                         |                    |
-| $x=1$  | ❌               | ❌                | ❌          | ⭕                       |                    |
-| $x=3$  | ❌               | ✔                | ❌          |                         | ⭕                  |
-| $x=4$  | ✔               | ✔                | ✔          |                         |                    |
-
 
 
 📌**Example: $f,g$ not continuous, but $f+g$ might be continuous**
@@ -631,24 +453,6 @@ $$
 
 ## 1.0. What is Derivative?
 
-### Summary⭐
-
-**📌Definition of the derivative**
-
-The **derivative** of a function $f(x)$ at a point $x=a$ is defined to be:
-$$
-f'(a)=\lim_{b\to a}\frac{f(b)-f(a)}{b-a}
-$$
-There is also an alternative definition:
-$$
-f'(a)=\lim_{h\to0}\frac{f(a+h)-f(a)}{h}
-$$
-
-
-**📌The Philosophy of Derivative**
-
-We care about the <u>derivative</u> of $f(x)$ at $x=a$ is <u>**instant rate of change**</u> of $f(x)$ at $x=a$.
-
 
 
 ### Example
@@ -702,60 +506,9 @@ There are:
 
 
 
-**📌Tangent Line**
-
-> ​	Definition
-
-The **tangent line** to a function $f(x)$ at the point $x=a$ is the line that passes through the point $(a,f(a))$, and whose slope is the instantaneous rate of change of $f(x)$ at the point $x=a$. This slope is the slope of the line you get <u>**if you imagine zooming in on the function until it looks like a line**</u>.
-
-Property of a tangent line:
-
-- Point $(a,f(a))$
-- Slope $m, \text{where }m=f'(a)$
-
-Diagram:
-
-<div align="center">
-    <figure>
-        <img src="img/images_u1der2_sincrossline.svg" style="width:30%" align="center">
-        <figcaption>Is Not a tangent line</figcaption>
-	</figure>
-    <figure>
-        <img src="img/images_u1der2_infiniteintersectiontanline.svg" style="width:30%" align="center">
-        <figcaption>Is a tangent line</figcaption>
-	</figure>
-</div>
-
-
 **📌Secant Line**
 
-> ​	Definition
-
-The **secant line** of a function $f(x)$ over the interval $a\leq x\leq b$, is the line that passes through the points $(a,f(a))$ and $(b,f(b))$.
-
-
-
-> ​	Slope
-
-The slope of the secant line is 
-$$
-\text{slope}=\frac{\Delta y}{\Delta x}=\frac{f(b)-f(a)}{b-a}
-$$
-, which is the <u>**average rate of change**</u> of the function $f(x)$ over the interval $a\leq x\leq b$.
-
-
-
-> ​	Equation
-
-The equation for the secant line is:
-$$
-y=\frac{f(b)-f(a)}{b-a}(x-a)+f(a)
-$$
-
-
-> ​	Chinese Name
-
-The secant line in Chinese is "正切线".
+![image-20220824130810807](img/image-20220824130810807.png)
 
 
 
@@ -2891,123 +2644,6 @@ $$
 
 
 
-
-# -------------------------------
-
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
-
-
-
-### Summary⭐
-
-### Example
 
 
 
