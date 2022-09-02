@@ -464,21 +464,6 @@ This chapter is mainly on Linear Function and Affine Function.
 
 ## 2.1. Basics of Linear Function
 
-### 2.1.1. Function Notation
-
-:pushpin:**The symbol**
-
-Use $f$ to denote a function.
-
-
-
-:pushpin: **What is a function?**
-
-$f$ is a function that **maps** real $n$-vectors to **real** numbers. 
-
-Therefore, $f(x)$ is a scalar which is the **value** of such function at $x$(param).  Hence, function sometimes is called real-valued function or scalar-valued function.
-
-
 
 ### 2.1.2. Inner Product Function
 
