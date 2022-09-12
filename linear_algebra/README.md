@@ -22,57 +22,9 @@ Therefore, for clarity. We use
 - $(a_i)j$ as the $j$-th element of the $i$-th vector.
 
 
-## 1.2. Vector Addition and Subtraction
 
-Prerequisite: The vectors have to be same shape.
-$$
-\begin{bmatrix}0\\7\\3\end{bmatrix}+
-\begin{bmatrix}1\\2\\0\end{bmatrix}=
-\begin{bmatrix}1\\9\\3\end{bmatrix}
-$$
-
-### 1.2.1. Properties
-
-📌 **commutative**
-$$
-a+b = b+a
-$$
-📌 **associative**
-
-$$
-(a+b)+c = a+(b+c)
-$$
 
 ## 1.3. Scalar-vector multiplication
-
-Nothing special.
-$$
-(-2)\begin{bmatrix}0\\7\\3\end{bmatrix}=\begin{bmatrix}0\\-14\\-6\end{bmatrix}
-$$
-
-### 1.3.1. Property
-
-$\alpha$-scalar
-
-$\beta,\gamma$ -vector
-
-📌 **commutative**
-
-$$
-(\beta\gamma)\alpha = \beta(\gamma\alpha)
-$$
-📌 **associative**
-$$
-(\beta+\gamma)\alpha = \beta\alpha+\gamma\alpha
-$$
-
-### 1.3.2. Example
-
-📌 **Displacement**
-
-Scale the displacement.
-
-<img src="img/image-20210901223116671.png" alt="image-20210901223116671" style="zoom:50%;" />
 
 
 
@@ -106,10 +58,6 @@ Nothing special, just a linear combination using *unit vectors* as bases.
 
 
 ### 1.3.4. Example
-
-📌 **Displacement**
-
-<img src="img/image-20210901224231734.png" alt="image-20210901224231734" style="zoom:50%;" />
 
 📌 **Line and Segment**
 
