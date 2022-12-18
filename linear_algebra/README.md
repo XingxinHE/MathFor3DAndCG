@@ -22,6 +22,15 @@ The following libraries are required among Jupyter Notebooks.
 
 ## 1.1 Definition
 
+:pushpin: **vector**
+
+It is a sequence of finite numbers / values. Normally it looks something like this:
+$$
+\begin{bmatrix}1\\2\\3\end{bmatrix}
+\text{or}
+\begin{pmatrix}1\\2\\3\end{pmatrix}
+$$
+
 
 :pushpin: **elements/entries/coefficients/components**
 
