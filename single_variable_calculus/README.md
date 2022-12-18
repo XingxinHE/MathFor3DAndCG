@@ -1,11 +1,197 @@
 
 
+<div align="center">
+    <h1>
+        Differentiation
+    </h1>
+</div>
+
 # 0.Limits
+
+
+
+
+
+
+## 0.2. Limits of quotients
+
+### Example
+
+📌**Example - Limit Laws**
+
+Suppose that:
+$$
+\lim_{x\to-1}f(x)=0, \lim_{x\to-1}g(x)=17, \lim_{x\to-1}h(x)=0
+$$
+We have:
+$$
+\begin{align}
+\lim_{x\to-1}g(x)h(x)&=0\\
+\lim_{x\to-1}\frac{g(x)}{f(x)}&=DNE\\
+\lim_{x\to-1}f(x)+g(x)+h(x)&=17\\
+\lim_{x\to-1}\frac{f(x)}{h(x)}&=\text{Cannot be determined based on the information given}\\
+\lim_{x\to-1}\frac{f(x)+h(x)}{g(x)}&=0
+\end{align}
+$$
+
+
+
+**📌Example of dealing with Case 3**
+
+Normally, when you encounter polynomial function, you would need a **<u>factorization</u>**.
+
+> ​	since $x^2+2x-3=0,\quad x^2-3x+2=0 \quad \text{when }x=0$, therefore we need to factorization.
+
+$$
+\begin{align}
+\lim_{x\to1}\frac{x^2+2x-3}{x^2-3x+2} &= \lim_{x\to1}\frac{(x-1)(x+3)}{(x-1)(x-2)}\\
+&=\lim_{x\to1}\frac{\cancel{(x-1)}(x+3)}{\cancel{(x-1)}(x-2)}\\
+&=-4
+\end{align}
+$$
+
+
+
+> ​	since $x+1=0,\quad x+\frac{1}{x}+2=0 \quad \text{when }x=-1$, therefore we need to factorization.
+
+$$
+\begin{align}
+\lim_{x\to-1}\frac{x+1}{x+\frac{1}{x}+2}&=\lim_{x\to-1}\frac{x(x+1)}{x(x+\frac{1}{x}+2)}\\
+&=\lim_{x\to-1}\frac{x^2+x}{x^2+1+2x}\\
+&=\lim_{x\to-1}\frac{x(x+1)}{(x+1)(x+1)}\\
+&=\lim_{x\to-1}\frac{x\cancel{(x+1)}}{(x+1)\cancel{(x+1)}}\\
+&=\lim_{x\to-1}\frac{-1}{0}\\
+&=DNE
+\end{align}
+$$
+
+
+
+
+
+📌**More Example - Division Limit**
+
+> ​	$\text{Case 1: If }&M\neq0,\text{then }\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}\\$
+
+$$
+\begin{align}
+\lim_{x\to2}\frac{1/x+x^2}{x-3}&=\frac{4.5}{-1}=-4.5\quad\text{(Case 1)}\\
+\end{align}
+$$
+
+
+
+> ​	$\text{Case 2: If }&M=0,\text{but }L\neq0,\text{then }\lim_{x\to a}\frac{f(x)}{g(x)}\text{ does not exist}\\$
+
+$$
+\begin{align}
+\lim_{x\to0^+}\frac{2\cos x+1}{x^2+x}&=\frac{2\cross1+1}{0+0} = DNE\quad\text{(Case 2)}\\
+\end{align}
+$$
+
+
+
+
+
+
+
+> ​	$\text{Case 3: If both }M=0\text{ and }L=0,\text{then }\lim_{x\to a}\frac{f(x)}{g(x)}\text{might be exist, or it might not exist.}$
+
+======>factorization
+$$
+\begin{align}
+\lim_{x\to2}\frac{12/x-3x}{2-3x+x^2}&=-6\quad\text{(Case 3, elaborate👇)}\\
+&=\lim_{x\to2}\frac{x(12/x-3x)}{x(2-3x+x^2)}\\
+&=\lim_{x\to2}\frac{12-3x^2}{x(x^2-3x+2)}\\
+&=\lim_{x\to2}-\frac{3x^2-12}{x(x^2-3x+2)}\\
+&=\lim_{x\to2}-\frac{3(x^2-4)}{x(x^2-3x+2)}\\
+&=\lim_{x\to2}-\frac{3(x+2)(x-2)}{x(x-1)(x-2)}\\
+&=\lim_{x\to2}-\frac{3(x+2)\cancel{(x-2)}}{x(x-1)\cancel{(x-2)}}\\
+&=\lim_{x\to2}-\frac{3(2+2)}{2(2-1)}=-6
+\end{align}
+$$
+
+
+
+======>factorization
+$$
+\begin{align}
+\lim_{x\to3}\frac{2x^2-10x+12}{x^3-6x^2+9x}&=\lim_{x\to3}\frac{2(x^2-5x+6)}{x(x^2-6x+9)}\\
+&=\lim_{x\to3}\frac{2(x-2)(x-3)}{x(x-3)^2}\\
+&=\lim_{x\to3}\frac{2(x-2)}{x(x-3)}\\
+&=\lim_{x\to3}\frac{2(3-2)}{3(3-3)}\\
+&=\lim_{x\to3}\frac{2\cross1}{0}\\
+\text{therefore, the result is }DNE
+\end{align}
+$$
+
+
+
+======>factorization
+$$
+\begin{align}
+\lim_{x\to0}\frac{3x^3+x^2}{x^3+x^2+x}&=\lim_{x\to0}\frac{x^2(3x+1)}{x^2(x+1+\frac{1}{x})}\\
+&=\lim_{x\to0}\frac{3x+1}{x+1+\frac{1}{x}}\\
+&=\lim_{x\to0}\frac{3\cross0+1}{0+1+\frac{1}{0}}\\
+&=\lim_{x\to0}\frac{1}{1+\infin}\\
+&=\text{because denominator is + infinity, therefore the whole is 0}\\
+&=0
+\end{align}
+$$
+
+
+
+======>factorization
+$$
+\begin{align}
+\lim_{x\to-1}\frac{2x^2+7x+5}{x+1} &= \lim_{x\to-1}\frac{2(x^2+\frac{7}{2}x+\frac{5}{2})}{x+1}\\
+&= \lim_{x\to-1}\frac{2(x+1)(x+\frac{5}{2})}{x+1}\\
+&= \lim_{x\to-1}\frac{2\cancel{(x+1)}(x+\frac{5}{2})}{\cancel{x+1}}\\
+&= \lim_{x\to-1}2(-1+\frac{5}{2})=3\\
+\end{align}
+$$
+
+
+
+
+
+
+
+**📌$DNE$ Speaking in <u>both</u> left-hand <u>and</u> right-hand**
+
+> ​	Q: Given the results for $\lim_{x\to0^-}\frac{1}{x}$ and $\lim_{x\to0^+}\frac{1}{x}$, what should we say about $\lim_{x\to0}\frac{1}{x}$?
+
+> ​	A: The limit does not exist($DNE$), and it is neither $+\infin$ nor $-\infin$. Let's look at the graph.
+
+<img src="img/image-20220606101513491.png" alt="image-20220606101513491" style="zoom: 25%;" />
+
+
+
+**📌$DNE$ Speaking in <u>either</u> both left-hand <u>or</u> right-hand**
+
+We can split it into left-hand and right-hand which are:
+$$
+\lim_{x\to2^-} \frac{3x}{4-x^2} \text{and }\lim_{x\to2^+} \frac{3x}{4-x^2}
+$$
+
+The difference is that:
+
+- in $x\to2^-$, the result of $4-x^2$ is very close to $0$ but $4>x^2$(positive), therefore $\lim_{x\to2^-} \frac{3x}{4-x^2}=+\infin$
+- in $x\to2^+$, the result of $4-x^2$ is very close to $0$ but $4<x^2$(negative), therefore $\lim_{x\to2^+} \frac{3x}{4-x^2}=-\infin$
+
+And we can see it from the following graph:
+
+<img src="img/image-20220606103534159.png" alt="image-20220606103534159" style="zoom: 25%;" />
 
 
 
 ## 0.3. Homework
 
+**📌Quiz**
+
+Why $x^{3/2}+4$ is not continuous?
+
+Because it is not defined where $x<0$ so therefore it is not continuous for all reall $x$.
 
 
 
@@ -57,14 +243,88 @@ Q3️⃣: If $a$ is a root of multiplicity 6 for the polynomial $p$, and a root 
 
 
 
+**📌Quiz**
+
+Let $f(x)=\frac{x-\sqrt[3]x+\cos x}{x^2-4}$ We have calculated the following values of $f$:
+$$
+\begin{align}
+f(-3)&=-.51\\
+f(-2.25)&=-1.48\\
+f(-1.5)&=.16\\
+f(-.75)&=-.26\\
+f(0)&=-.25\\
+f(.75)&=-.17\\
+f(1.5)&=-.24\\
+f(2.25)&=.29\\
+f(3)&=.11\\
+\end{align}
+$$
+The number of roots of $f$ is **<u>at least</u>** **1**.
+
+We know that this function is not continuous at $\pm2$ and therefore we need to consider that dividing the region into:
+$$
+(-\infin,-2),(-2,2),(2,+\infin)
+$$
+
+
+
 
 # 1.Derivative
+
+## 1.0. What is Derivative?
+
+
+
+### Example
+
+We will take a look on the following example:
+
+<img src="img/image-20220606135203886.png" alt="image-20220606135203886" style="zoom:33%;" />
+
+> ​	Q: the average velocity between $t=0$ and $t=1$
+
+That would be:
+$$
+\begin{align}
+\text{average velocity}&=\frac{f(1)-f(0)}{1-0}\\
+&=\frac{100+20\cross1-5\cross1^2-(100+20\cross0-5\cross0^2)}{1}\\
+&=15\text{m/s}
+\end{align}
+$$
+
+> ​	Q: instantaneous velocity at $t=1$
+
+That would be:
+$$
+\begin{align}
+\text{instantaneous velocity}&=f'(1)\\&=\lim_{b\to1}\frac{f(b)-f(1)}{b-1}\\
+&=\lim_{b\to1}\frac{100+20b-5b^2-(100+20-5)}{b-1}\\
+&=\lim_{b\to1}\frac{20b-5b^2-15}{b-1}\\
+&=\lim_{b\to1}\frac{-5(b^2-4b+3)}{b-1}\\
+&=\lim_{b\to1}\frac{-5(b-1)(b-3)}{b-1}\\
+&=\lim_{b\to1}\frac{-5\cancel{(b-1)}(b-3)}{\cancel{b-1}}\\&=-5\cross(-2)=10\text{ m/s}
+\end{align}
+$$
+
+### Misc
+
+Calculus is all about variables changing.
 
 
 
 ## 1.1. Geometric interpretation of the derivative
 
 ### Summary⭐
+
+**📌3 Main Interpretation of Derivative**
+
+There are:
+
+- physical -  instantaneous rate of change.
+- geometrical - the slope of the tangent line.
+- sensitive - the sensitivity of a function to small changes.
+
+
 
 **📌Secant Line**
 
@@ -328,6 +588,16 @@ Please take a look at the following example:
 
 ### Summary⭐
 
+**📌Delta Notation$\Delta$**
+
+We change the notation from:
+$$
+f'(x)=\lim_{b\to x}\frac{f(b)-f(x)}{b-x}\\
+$$
+to:
+$$
+f'(x)=\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\\
+$$
 
 
 
@@ -500,6 +770,8 @@ $$
 
 **📌Why Leibniz notation?**
 
+The biggest reason is that <u>it reminds us what the input variable is</u>. The derivative is measuring the instantaneous rate of change of the output variable of a function with respect to the input variable. Sometimes, if there are lots of quantities that have variables representing them, it's easy to lose track of what is what; Leibniz notation helps to remind us.
+
 
 <div align="center">
     <figure>
@@ -529,6 +801,38 @@ $$
 $$
 
 
+
+
+**📌Properties of Leibniz notation🌟**
+
+There are few common properties of Leibniz notation.
+
+> ​	**Units:**
+
+If $P$ has units of pressure, and $t$ has units of <u>**time**</u>, then the following has units of pressure per time:
+$$
+\frac{dP}{dt}
+$$
+
+
+> ​	**Evaluating at points:**
+
+If we want to take the derivative at a particular point $x=3$, then we use the following notation. The bar is read as “<u>**evaluated at**</u>".
+$$
+\frac{df}{dx}\Bigg|_{x=3}
+$$
+
+
+> ​	**Derivatives act on functions:**
+
+We can write for the derivative of $x^2$ as:
+$$
+\frac{d(x^2)}{dx}
+$$
+If a formula is long, we can write:
+$$
+\frac{d}{dy}(y^3+2y^2)
+$$
 
 
 
@@ -943,6 +1247,88 @@ Let $f(x)=x^{-7/4}$. Then this limit is $\lim_{x\to1}\frac{f(x)-1}{x-1}=f'(1)$. 
 
 
 # 2.Differentiation
+
+## 2.0. Linear Approximation
+
+### Summary⭐
+
+**📌Linear approximation**
+
+The linear approximation for a function $f$ near a point $x=a$ is given by the following equivalent formulas:
+$$
+\Delta f\approx\frac{df}{dx}\bigg|_{x=a}\cdot\Delta x\quad\text{for }\Delta x\text{ near 0}\\
+f(x)\approx f'(a)(x-a)+f(a)\quad\text{for }x \text{ near }a
+$$
+
+
+
+
+### Example
+
+**📌Linear Approximation Easy Example**
+
+Given a function:
+$$
+g(x)=\sqrt{x}
+$$
+What is the value of $g(104)$? Use linear approximation rather than calculator to do this.
+
+Because 104 is near 100, so we can set $a=100$.
+$$
+g'(x)=\frac{1}{2\sqrt{x}}
+$$
+Then we know the slope at $x=100$:
+$$
+g'(100)=\frac{1}{20}=0.05
+$$
+And also we know the value at $x=100$ is:
+$$
+g(100)=\sqrt{100}=10
+$$
+So we can draw the diagram:
+
+<div align="center">
+    <figure>
+    <div><img src="img/linear_approximation.svg" style="width:35%" align="center"></div>
+    </figure>
+</div>
+
+From $x=100$ to $x=104$, the difference can be "**approximated**" as the $?$ on the purple line. Imagine the $(100, 10)$ as the origin, then the height of purple line is:
+$$
+0.05\cross(104-100) = 0.2 = \Delta g(x)
+$$
+Therefore, 
+$$
+\begin{align}
+g(104) &\approx g(100)+\Delta g(104-100)\\
+&=10+0.2=10.2
+\end{align}
+$$
+
+
+
+**📌Exercise**
+
+Find the linear approximation of the following function near $x=0$.
+$$
+f(x)=\frac{1}{a+bx}, a\neq0
+$$
+
+> ​	Solution:
+
+We have linear approximation as follow:
+$$
+\begin{align}
+f(x)&\approx f'(a)(x-a)+f(a)\\
+&\approx f'(0)\cdot(x-0)+f(0)\\
+&\approx \frac{1'(a+bx)-1\cdot(a+bx)'}{(a+bx)^2}(x-0)+f(0)\\
+&\approx \frac{-b}{a^2}x+\frac{1}{a}
+\end{align}
+$$
+
+
+
+
 
 
 
@@ -1822,6 +2208,20 @@ $$
 
 ### Summary⭐
 
+**📌Quadratic Approximation**
+
+The quadratic approximation near $x=a$ is the best fit parabola to $f$ at the point $x=a$.
+
+The formula for the quadratic approximation of a function $f$ near a point $x=a$ is
+$$
+f(x)\approx f(a)+f'(a)(x-a)+\frac{f''(a)}{2}(x-a)^2
+$$
+When $a=0$, this quadratic approximation becomes
+$$
+f(x)\approx f(0)+f'(0)(x)+\frac{f''(0)}{2}(x)^2
+$$
+
+
 **📌Big-O notation**
 
 A function $f(x)$ is on the order $x^n$ near $x=0$, which is denoted using big “O" notation as $f(x)=O(x^n)$ near $x=0$, if $\abs{f(x)}\leq kx^n$ for some constant $k$.
@@ -1970,9 +2370,118 @@ $$
 
 
 
+# 😏------Cheat Sheet------📃
+
+**📌Derivative of basic functions**
 
 
 
+
+
+**📌Linear approximations of basic functions**
+
+> ​	$(1+x)^r$ near $x=0$
+
+$$
+1+rx
+$$
+
+
+
+> ​	$\sin{(x)}$ near $x=0$
+
+$$
+x
+$$
+
+> ​	$\cos{(x)}$ near $x=0$
+
+$$
+1
+$$
+
+
+
+> ​	$e^x$ near $x=0$
+
+$$
+1+x
+$$
+
+
+
+> ​	$\ln{(1+x)}$ near $x=0$
+
+$$
+x
+$$
+
+
+
+**📌Quadratic approximation of basic functions**
+
+
+> ​	$(1+x)^r$ near $x=0$
+
+$$
+1+rx+\frac{r(r-1)}{2}x^2+O(x^3)
+$$
+
+
+
+> ​	$\sin{(x)}$ near $x=0$
+
+$$
+x+O(x^3)
+$$
+
+> ​	$\cos{(x)}$ near $x=0$
+
+$$
+1-\frac{x^2}{2}+O(x^3)
+$$
+
+
+
+> ​	$e^x$ near $x=0$
+
+$$
+1+x+\frac{x^2}{2}+O(x^3)
+$$
+
+
+
+> ​	$\ln{(1+x)}$ near $x=0$
+
+$$
+x-\frac{x^2}{2}+O(x^3)
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div align="center">
+    <h1>
+        Integration
+    </h1>
+</div>
+
+
+
+<div align="center">
+    <h1>
+        Coordinate Systems & Infinite Series
+    </h1>
+</div>
 
 
 
